@@ -1,0 +1,89 @@
+
+#out_send_window .form_select, #out_send_window .form_input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px #f4f4f4;
+    color: #656565;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    height: 14px;
+    padding: 2px 6px 6px;
+    width: calc(100% - 12px);
+}    
+
+#out_send_window .but {
+    /*padding: 7px 18px 8px;*/
+    width: 81px;
+    margin-top:3px;
+}
+
+#out_send_window .sms-content #code {
+    width: 100px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px;
+}
+
+.blueB {
+    background-position: 0 -85px;
+    border: 1px solid #3672a0;
+    color: #fff;
+}
+
+#out_send_window .but {
+    /*background-image: url("/images/ui/usualButtons.png");*/
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    margin-left: 10px;
+    max-height: 29px;
+    /*padding: 4px;*/
+    padding: 7px 18px 8px;
+    white-space: nowrap;
+    width: auto;
+}
+
+#out_send_window .formRow.padding10-40 {
+    padding: 10px 40px;
+}
+#out_send_window .formRow {
+    overflow: auto;
+}
+
+/*#sms-code .label {
+    line-height: 28px;
+}*/
+
+
+
+#out_send_window .formRow label {
+    display: initial;
+}
+
+#out_send_window .formRow > label {
+    display: block;
+    float: left;
+    padding: 4px 0;
+    text-align: left;
+}
+
+
+
+
+#out_send_window .formRow .formRight {
+    display: block;
+    float: right;
+    margin: 0 auto;
+}
+
+
+#out_send_window.popup_window
+{
+    width: 550px;
+    left: 33%
+}

@@ -1,0 +1,6 @@
+Host *gulfoffice.com
+	IdentityFile ~/.ssh/id_rsa.git
+    Port 2235
+Host *cannedstyle.com
+	IdentityFile ~/.ssh/id_rsa.git
+    Port 2235

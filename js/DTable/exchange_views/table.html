@@ -1,0 +1,84 @@
+    <div id="dTable-credit_wrapper" class="dataTables_wrapper">
+        {# TITLE #}
+        {% if title %}
+            <div class="panel-heading">
+
+                {# LOADING INDICATOR #}
+                <div class="pull-right" data-dtable="loading-container"></div>
+
+<!--                <h3 class="panel-title">{{ title }}</h3>-->
+            </div>
+        {% endif %}
+        {% if (pagination or search) %}
+        <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+            {% if pagination %}
+            <div data-dtable="pagination" id="dTable-credit_paginate" class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers">
+            </div>
+            {% endif %}
+            {% if search %}
+            <div id="dTable-credit_filter" class="dataTables_filter">
+                <label><span class="itemsPerPage">{{def_all.search_name}}:</span>
+                    <input placeholder="{{ search.placeholder }}" type="text"  data-dtable="search"/>
+                </label>
+                <div class="srch"></div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        <table id="dTable-credit" class="dTable">
+            <thead>
+                {% if has_column_title %}
+                <tr>
+                    {% for column_id, column_def in columns %}
+                    <th class="ui-state-default th_col_{{column_id}}" style="cursor: pointer; text-align: center;">
+                        {% if column_def.title %}
+
+                            <div class="DataTables_sort_wrapper">
+                                <span>{{ column_def.title }}{% if column_def.order %}<span data-dtable="order.both" data-dtable-column="{{ column_id }}">↓↑</span>{% endif %}</span>
+                            </div>
+
+                            {# =====================================
+                              COLUMN FILTER
+                              filter column by typing in the input field
+                            ===================================== #}
+                            {% if has_column_filter %}
+                                {% if column_def.filter and column_def.filter != 'select' %}
+                                    <input type="text" class="form-control find_input" placeholder="{{ column_def.filter.placeholder }}"
+                                        data-dtable="filter" data-column="{{ column_id }}">
+                                {% endif %}
+                                {% if column_def.filter and column_def.filter == 'select' %}
+                                    <select class="form-control find_input" data-dtable="filter" data-column="{{ column_id }}">
+                                            <option value=''>-</option>
+                                        {% for k, v in column_def.formatter.widget_options.select %}
+                                            <option value='{{ k }}'>{{ v }}</option>
+                                        {% endfor %}
+                                    </select>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </th>
+                    {% endfor %}
+                </tr>
+                {% endif %}
+            </thead>
+
+            <tbody data-dtable="table">
+            </tbody>
+        </table>
+        {% if (pagination or search) %}
+        <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+            {% if search %}
+            <div id="dTable-credit_filter" class="dataTables_filter">
+                <label><span class="itemsPerPage">{{def_all.search_name}}:</span>
+                    <input placeholder="{{ search.placeholder }}" type="text"  data-dtable="search"/>
+                </label>
+                <div class="srch"></div>
+            </div>
+            {% endif %}
+            {% if pagination %}
+            <div data-dtable="pagination" id="dTable-credit_paginate" class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers">
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>

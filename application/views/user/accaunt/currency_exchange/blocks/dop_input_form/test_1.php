@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/js/user/jquery.js"></script>
+    
+    <!--<script src="//select2.github.io/select2/select2-3.4.1/select2.js"></script>-->
+    <script src="/js/user/select2-3.4.1/select2.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="//select2.github.io/select2/select2-3.4.1/select2.css"/>-->
+    <link rel="stylesheet" type="text/css" href="/js/user/select2-3.4.1/css/select21.css"/>
+    <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">-->
+    <link href="/js/user/select2-3.4.1/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/js/user/select2-3.4.1/select2-bootstrap.css"/>
+  </head>
+  <body style="margin:20px;">
+    <h1>Select2 version 3.4.1</h1>
+
+    <ul class="nav nav-tabs">
+      
+        <li class=""><a href="3.3.2.html">3.3.2</a></li>
+      
+        <li class="active"><a href="3.4.1.html">3.4.1</a></li>
+      
+    </ul>
+    <hr>
+    <form class="form-horizontal">
+      <div class="control-group">
+        <label for="default" class="control-label">Default textbox</label>
+        <div class="controls">
+          <input id="default" type="text" />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="single" class="control-label">Select2 single select</label>
+        <div class="controls">
+          <select id="single" class="select2 input-default">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="multiple" class="control-label">Select2 multi select</label>
+        <div class="controls">
+          <select id="multiple" class="select2" multiple="multiple" style="width:400px;">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="single-append" class="control-label">Select2 append</label>
+        <div class="controls">
+          <div class="input-append">
+            <select id="single-append" class="select2" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+            <button class="btn" type="button" data-select2-open="single-append">
+              <i class="icon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="single-prepend" class="control-label">Select2 prepend</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <button class="btn" type="button" data-select2-open="single-prepend">
+              <i class="icon-search"></i>
+            </button>
+            <select id="single-prepend" class="select2" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="multi-append" class="control-label">Select2 multi append</label>
+        <div class="controls">
+          <div class="input-append">
+            <select id="multi-append" class="select2" multiple="multiple" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+            <button class="btn" type="button" data-select2-open="multi-append">
+              <i class="icon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="multi-prepend" class="control-label">Select2 multi prepend</label>
+        <div class="controls">
+          <div class="input-prepend">
+            <button class="btn" type="button" data-select2-open="multi-prepend">
+              <i class="icon-search"></i>
+            </button>
+            <select id="multi-prepend" class="select2" multiple="multiple" style="width:400px;">
+              <option></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="remote-load" class="control-label">Select2 custom data load</label>
+        <div class="controls">
+          <div class="input-prepend input-append">
+            <button class="btn" type="button" data-select2-open="remote-load">
+              <i class="icon-search"></i>
+            </button>
+            <input id="remote-load" type="hidden" class="select2-remote" style="width:400px;">
+            <button class="btn" type="button" data-select2-open="remote-load">
+              <i class="icon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="single" class="control-label">Select2 single select sizes</label>
+        <div class="controls">
+          <select id="span_small" class="select2 input-small">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <select id="span_medium" class="select2 input-medium">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <select id="span_large" class="select2 input-large">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="single" class="control-label">Select2 single select spans</label>
+        <div class="controls">
+          <select id="span_1" class="select2 span1">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <select id="span_2" class="select2 span2">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <select id="span_3" class="select2 span3">
+            <option></option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      $('.select2').select2({ placeholder : '' });
+
+      $('.select2-remote').select2({ data: [{id:'A', text:'A'}]});
+
+      $('button[data-select2-open]').click(function(){
+        $('#' + $(this).data('select2-open')).select2('open');
+      });
+    </script>
+  </body>
+</html>

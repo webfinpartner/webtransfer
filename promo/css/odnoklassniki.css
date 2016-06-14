@@ -1,0 +1,18 @@
+.odkl-oauth-lnk { /*one-click voted*/
+	border-style: none;
+	font: normal 17px arial;
+	display: -moz-inline-stack;
+	display: inline-block;
+	*display: inline;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	text-decoration: none;
+	zoom: 1;
+	height: 46px;
+}
+
+.odkl-oauth-lnk {
+	background: #f93 url(/res/default/Images/api/oauth/odkl_oauth.png) no-repeat;
+	padding-left: 164px;
+	*padding: 0 0 0 164px;
+}

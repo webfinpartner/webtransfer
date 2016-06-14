@@ -1,0 +1,13 @@
+{% if 0 < rows.length %}
+    {% for row in rows %}
+        <tr class="row_on_click" {% if ( row['red'] == 1 ) %}style="color: red"{% endif %}>
+            {% for column_id, column_def in columns %}
+                <td class="col_id_{{column_id}}" {% if ( column_id != 'action' ) %}{{column_id}}="{{ row[column_id] }}"{% endif %}>{{ row[column_id] }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+{% else %}
+    <tr class="row_empty">
+        <td colspan="{{count_cols}}"><center>Нет данных</center></td>
+    </tr>
+{% endif %}

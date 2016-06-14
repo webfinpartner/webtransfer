@@ -1,0 +1,468 @@
+* { margin:0; padding:0; color:#333; }
+html { }
+body { background:#fff url(../img/bodybg.gif) center top no-repeat; text-align:center; }
+img { border:0; }
+@font-face {
+    font-family: 'dindisplay';
+    src: url('../fonts/pfdindisplaypro-reg.eot');
+    src: url('../fonts/pfdindisplaypro-reg.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdindisplaypro-reg.woff') format('woff'),
+         url('../fonts/pfdindisplaypro-reg.ttf') format('truetype'),
+         url('../fonts/pfdindisplaypro-reg.svg#pf_dindisplay_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.clear { clear:both; }
+
+a { color:#2B6AE2; text-decoration:none; }
+a:hover,a:active { color:#333; }
+
+.link1 { font:10px Arial; color:#888 }
+a.link1 { color:#777; text-decoration:underline }
+a.link1:hover,a.link1:active { color:#424242; text-decoration:underline }
+
+.link12 { font:10px Arial; color:#888 }
+a.link12 { font:10px Arial; color:#888; text-decoration:none }
+a.link12:hover,a.link12:active { color:#424242; text-decoration:none }
+
+#topline { position:relative; margin:0px auto; padding:0px auto; width:100%; height:20px; background:#454545; }
+#topline td { font:11px Arial; }
+.tl2 { background:#787878; width:45px; color:#acacac; text-align:center }
+.tl3 { width:164px; text-align:center; }
+.tl4 { width:230px; text-align:center; }
+#topline td a {  color:#acacac; text-decoration:none; }
+#topline td a:hover,active { text-decoration:none;  color:#fff; }
+
+#wrapper { position:relative; width: 1063px; margin:0px auto; padding:0px auto; text-align:left; }
+
+#left { float:left; padding:57px 0 0 0; font:11px Arial; }
+#slogan { font:10px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #666; margin:5px 0 0 3px; padding:0; }
+#slogan_en { font:10px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #666; margin:5px 0 0 23px; padding:0; }
+#left table td { padding:1px }
+
+.loginblock { margin:81px 0 0 3px; background:#fff url(../img/log_in.gif) no-repeat; }
+.loginblock p { padding:0; margin:0; }
+.loginblock2 { margin:15px 0 0 3px; background:#fff url(../img/openacc.gif) no-repeat; }
+.loginblock2 p { padding:0; margin:0; }
+.login { width:105px; height:19px; border:1px solid #abadb3; background:#fff; font: bold 13px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color:#000; margin-right:1px; padding:2px }
+.loginblock_en { margin:81px 0 0 3px; background:#fff url(../img/log_in_en.gif) no-repeat; }
+.loginblock2_en { margin:15px 0 0 3px; background:#fff url(../img/openacc_en.gif) no-repeat; }
+
+#headers { background:#fff url(../img/hdrs_bg.gif) no-repeat;
+	margin:37px 0 17px;
+	width:810px;
+	padding-top:15px;
+	height:41px;
+	font: 20px 'dindisplay'; color: #ff7633;
+	text-align:center;
+	}
+#headers a { font: bold 20px 'dindisplay'; color: #4f4c4c; text-transform:uppercase; }
+#headers a:hover,a:active  { text-decoration:none; color:#000; }
+ 
+#contact_line { float:right; padding-bottom:2px; font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #6b6b6b; }
+#contact_line a { text-transform:uppercase; color:#ff7633; text-decoration:none; }
+#contact_line a:hover,a:active { text-decoration:none; color:#000; }
+
+
+/*	C O N T E N T  */
+
+#content { padding:34px 0 0 0; margin-left:253px } /* margin-left:256px на margin-left:253px 26.06*/
+
+#content h4 { border-top:1px solid #ccc; padding:11px 0 0; font:20px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #ff5200; }
+
+#main1bg { margin: 24px 0 15px;
+	width:460px; height:159px;
+    background: url(../img/main1_bg.jpg) no-repeat;
+    padding: 25px 0 0 350px;
+	font: 17px 'dindisplay';
+    color: #fff; line-height:160%;
+}
+
+.approvm { float:right; 
+	z-index:0; padding: 9px 20px 0 0;
+	font: bold 17px Arial;
+    color: #333; line-height:100%;
+}
+
+
+h2 {
+    font: 24px/40px 'dindisplay';
+    color: #FF5300;
+    margin-bottom: 7px;
+}
+.grey {
+    color: #676c74;
+}
+.constructor {
+    width: 810px;
+    position: relative;
+}
+.constructor_form {
+    background: url(../img/calculator_bg1.png) no-repeat 0 10px;
+    padding: 15px 0 0 30px;
+    width: 780px;
+    margin: 0 auto;
+    height: 490px;
+    position: relative;
+
+}
+
+.man {
+    background: url("../img/man2.png") no-repeat scroll 0 0 transparent;
+    height: 375px;
+    position: absolute;
+    right: 0;
+    top: 124px;
+    width: 515px;
+}
+
+.slider_title {
+    font: 14px/27px Arial;
+    color: #434952;
+}
+.slider_tip {
+    font: 16px/22px Arial;
+    color: #FF5300;
+    right: 244px;
+    position: absolute;
+}
+
+.slider1 {
+    width: 487px;
+    height: 46px;
+    padding-left: 20px;
+    padding-right: 30px;
+    background:url(../img/slider.png);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 99;
+	font: Arial;
+}
+#priceSlider {
+	margin-left:24px;
+    position:relative;
+    width: 473px;
+    height: 46px;
+	font: Arial;
+}
+.slider2 {
+    width: 487px;
+    height: 46px;
+    padding-left: 27px;
+    padding-right: 23px;
+    background:url(../img/slider2.png);
+    margin-bottom: 35px;
+    margin-top: 1px;
+    position: relative;
+    z-index: 99;
+}
+#timeSlider {
+margin-left:10px;
+    position: relative;
+    width: 475px;
+    height: 46px;
+ 
+}
+
+.constructor_form .result {
+	font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial;
+    line-height: 22px;
+    margin: 35px 0 15px 60px;
+}
+.constructor_form .result span {
+    font-weight: bold;
+    color: #6084c9;
+}
+#request .summary.block {
+    display: block;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+.summary {
+	font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial;
+    display: inline-block;
+    margin-right: 30px;
+}
+.summary span {
+    font: bold 25px Arial;
+    color: #FF5300;
+}
+.button {
+    margin-top: 20px;
+    width:  256px;
+    height: 40px;
+    background: url(../img/button.png) no-repeat 0 0;
+    background: #fdfefe; /* Old browsers */
+    background: -moz-linear-gradient(top, #fdfefe 0%, #edf3fa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfefe), color-stop(100%,#edf3fa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fdfefe 0%,#edf3fa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fdfefe 0%,#edf3fa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fdfefe 0%,#edf3fa 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fdfefe 0%,#edf3fa 100%); /* W3C */
+    border: 1px solid #9eb7ce;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 50px;
+    color: #FF5300;
+    position: relative;
+	font: 28px "dindisplay";
+}
+.button:hover {
+    background: -moz-linear-gradient(top, #edf3fa 0%, #fdfefe 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf3fa), color-stop(100%,#fdfefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #edf3fa 0%,#fdfefe 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #edf3fa 0%,#fdfefe 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #edf3fa 0%,#fdfefe 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #edf3fa 0%,#fdfefe 100%); /* W3C */
+}
+.button a {
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #FF5300;
+	font: 28px "dindisplay";
+	text-decoration: none;
+    
+}
+.ui-slider a {position:absolute; top:25px; display:block; width:23px; height:30px; margin-left:-11.5px; background:url(../img/slider_handler.png)}
+ .slider_legend {height:14px; margin:-2px 0 3px; color:#3b3b3b}
+.slider_legend span {float:right}
+.slider_legend span:first-child {float:left}
+.slider_value {position:absolute; top:-5px; display:none; padding:0 3px; line-height:20px; text-shadow:0 1px 0 #fff; white-space:nowrap; color:#333; font:Arial;}
+.slider_value div {padding:0 7px 7px; background:url(../img/slider_value.png) 50% 0}
+.slider_value div:before {content:''; position:absolute; top:0; left:0; display:block; width:3px; height:27px; background:url(../img/slider_value_l.png)}
+.slider_value div:after {content:''; position:absolute; top:0; right:0; display:block; width:3px; height:27px; background:url(../img/slider_value_r.png)}
+
+
+
+
+
+
+
+
+.myaccounts { background:#fff url(../img/myaccbg.gif) no-repeat; padding:0; margin:0; }
+.myaccounts p { padding:0; margin:0; }
+.myaccounts table td { font:11px Arial; }
+.acc_name { padding:0 0 11px 0; font:12px Arial; }
+
+
+.main_txt { background:#F7F9F0 url(../img/maintxt_bg.gif) no-repeat; width:300px; height:337px; margin-left:503px; }
+.m_text { padding:31px 33px; height:245px; font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #414141; line-height:160% }
+
+
+#topblock { float:left; font:11px Arial; color:#777; }
+#topblock { margin:0 0 0 4px; padding:0; }
+#topblock a { font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; background-color: #faea90; padding:2px; color:#000; border:solid 1px #666; }
+#topblock a:hover { color: #000; background-color: #fbcf8a; }
+
+
+
+.page_txt { background:#F7F9F0 url(../img/pagetxt_bg.gif) no-repeat; width:561px; margin-left:245px; }
+.p_text { padding:27px 30px 36px 36px; font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #333; line-height:160% }
+.p_text h1 { padding:0 0 26px; font:20px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #ff5200 }
+.p_text h2 { padding:23px 0 20px; font:16px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #000 }
+
+.t_text { padding:34px 10px 0; font:13px Verdana, Arial; color: #333; line-height:160% }
+.t_text h1 { padding:20px 0 26px; font:20px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #ff5200; border-top:solid 1px #cacaca; }
+
+.c_text h1 { padding:0 0 24px; font:20px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #ff5200 }
+.c_text h1 a { font:14px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #63b7eb; }
+.c_text h1 a:hover,active { text-decoration:none; color: #000; }
+
+
+.test_text { border-top:solid 1px #cacaca; padding-top:20px; font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial; }
+.test_text h1 { padding-bottom:20px; font:20px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #ff5200 }
+
+
+
+
+.small { font: 11px 'Lucida Grande', 'Lucida Sans Unicode', Arial; letter-spacing: 0px; color:#777; }
+.phone { font:bold 15px 'Lucida Grande', 'Lucida Sans Unicode', Arial; letter-spacing: 1px; color:#ff5200; }
+.links_td { vertical-align:top; 
+	padding-left:14px; 
+	border-left:1px solid #e3e3e3;
+	font: 11px 'Lucida Grande', 'Lucida Sans Unicode', Arial;
+	line-height:170%;
+	}
+.links_td a { color: #888; text-decoration:none; }
+.links_td a:hover,active { text-decoration:underline; color:#424242; }
+
+
+
+
+#wtblock { padding:28px 0 0 10px }
+#wtblock1 { margin-top:20px; }
+
+.table_1 td { padding:3px; }
+
+
+input.button { border:1px solid #888;
+         padding:5px;
+         color:#000;
+         text-decoration:none;
+		 cursor: pointer;
+		 background: #e9e9e9 url(../img/bttn_bg.gif) repeat-x;
+         font:13px Verdana,Arial; 
+		 }
+input.button1 { border:1px solid #888;
+         padding:3px;
+         color:#000;
+         text-decoration:none;
+		 cursor: pointer;
+		 background: #e9e9e9 url(../img/bttn_bg.gif) repeat-x;
+         font:12px Arial; 
+		 }
+		  
+a.pageSel, a.pageSel:visited { background:#ff5200; color:#fff; padding:2px 5px; }
+
+.currs { list-style: none; }
+
+.currs li { padding:5px }
+
+
+
+
+.inlink { font:bold 15px Georgia; color:#0083cd }
+a.inlink { font:bold 15px Georgia; color:#0083cd }
+a.inlink:hover,a.inlink:active { text-decoration:underline }
+
+
+
+
+.manual_img { padding:14px 0 28px; }
+
+.contform { background:#fff; }
+#contform { margin:7px 0; background:#fff; }
+#contform form input { width:160px; font:12px Arial; padding:2px; }
+#contform form textarea { width:275px; font:12px Arial; padding:2px; }
+#contform form td { padding:3px; }
+
+.message {background:#eee; color:#000;display:none;width:460px;padding:10px;margin-bottom:10px }
+.contact { padding:14px }
+.contact ul {list-style-type:none;width:390px;}
+.contact li {list-style-type:none;}
+.contact li.special {display:none;}
+.contact input {width:260px;}
+.contact textarea {width:260px;}
+
+
+
+
+
+/*	F O O T E R  */
+
+#footer1 { position:relative; margin:60px 0 0 0; padding:10px 0 20px; font: 12px 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; color:#424242; border-top:1px solid #ccc; }
+#footertext a { color: #2B6AE2; text-decoration:none; }
+#footertext a:hover,active { text-decoration:none; color:#333 }
+
+#footertext .link1red { color:#ff5b00 }
+#footertext a.link1red { color:#ff5b00; text-decoration:none }
+#footertext a.link1red:hover,active { color:#ff5b00; text-decoration:underline }
+
+.footertxt { padding:20px 0 10px; font: 11px 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; color:#666; line-height:150% }
+
+
+
+
+/*	A D D  */
+
+.newf { font: 11px 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; color:#666; margin-top:174px; padding:0 35px 21px 35px; line-height:150%; }
+
+.newfbtt { text-align:center; }
+
+.newf1 { width:251px; height:303px; vertical-align:top; background:transparent url(../img/facebg1.gif) no-repeat 0 0; }
+.newf2 { width:251px; height:303px; vertical-align:top; background:transparent url(../img/facebg2.gif) no-repeat 0 0; }
+.newf3 { width:251px; height:303px; vertical-align:top; background:transparent url(../img/facebg3.gif) no-repeat 0 0; }
+
+.newf4 { margin-top:32px; width:527px; height:115px; }
+
+.newf5 { float:right; margin-top:32px; width:251px; height:115px; background:transparent url(../img/facebg5.gif) no-repeat 0 0; }
+.newf5txt { padding:14px 27px 0 17px; font: 10px 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; color:#fff; line-height:140% }
+
+.newf6 { float:left; margin-top:32px; width:251px; height:115px; background:transparent url(../img/facebg5.gif) no-repeat 0 0; }
+.newf6txt { padding:14px 27px 0 17px; font: 10px 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; color:#fff; line-height:140% }
+
+.newf7 { margin:32px 0 0 276px; width:527px; height:115px; }
+
+.shadow { left: 0;
+        top: 1px;
+        color: #eee;
+        position: absolute;
+        z-index: 0; }
+.header   { color: #666; }
+
+
+#calc { }
+
+#calc  td { font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #333; }
+#calc  .verysmall { font:9px Arial; color: #777; line-height:110%; }
+
+#calc input.data1 { padding: 3px; font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #006600; width:36px; border:1px solid #777; }
+#calc input.data2 { padding: 3px; font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #777; width:36px; background:#fbf8cc; border:1px solid #777; }
+#calc input.data3 { padding: 3px; font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #000; width:40px; background:#fbf8cc; border:1px solid #777; }
+
+
+
+#loancount { width:400px; }
+
+#loancount p { font:14px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #333; padding:14px 0; }
+#loancount td { font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #333; }
+#loancount .verysmall { font:9px Arial; color: #777; line-height:110%; }
+
+##loancount input.data1 { padding: 3px; font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #006600; width:36px; border:1px solid #777; }
+##loancount input.data2 { padding: 3px; font:12px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #777; width:36px; background:#fbf8cc; border:1px solid #777; }
+##loancount input.data3 { padding: 3px; font:13px 'Lucida Grande', 'Lucida Sans Unicode', Arial; color: #000; width:40px; background:#fbf8cc; border:1px solid #777; }
+
+
+#credslider1 { height:28px; background:transparent url(../img/loan_bg.gif) no-repeat; margin-bottom:20px; }
+#credslider2 { height:28px; background:transparent url(../img/loan_bg1.gif) no-repeat; margin-bottom:20px; }
+
+
+#contact_form_holder {  
+    font-family: 'Verdana'; /* this is a nice font-family, at least i think, if you don't like it change it <img src="http://web.enavu.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">  */  
+    font-variant: small-caps; /* making the small letter looks like capital but keeping the size of it to smaller, looks cool */  
+    width:400px; /* setting a fixed width of the contact form holder will make things easier later (like aligning and such) */  
+}  
+#contact_form_holder input, #contact_form_holder textarea {  
+    width:100%; /* make all the inputs and the textarea same size (100% of the div they are into) */  
+    font-family: inherit ; /* we must set this, so it inherits the font-family */  
+    padding:5px; /* and make a custom padding, you can set whatever you like */  
+}  
+#contact_form_holder textarea {  
+    height:100px; /* i never liked small textareas, so make it 100px in height */  
+}  
+#send_message {  
+    width:200px !important; /* the width of the submit button  */  
+    font-variant: small-caps; /* nicer font-variant (like explained before) */  
+    border:1px solid black; /* remove the default border and put a normal black one */  
+    cursor:pointer;  
+    cursor:hand;  
+}  
+#cf_submit_p { text-align:rightright; } /* show the submit button aligned with the right side */  
+  
+/* styling */  
+  
+.error {  
+    display: none; /* hide the errors */  
+    /* add some styling */  
+    padding:10px;  
+    color: #D8000C;  
+    font-size:12px;  
+    background-color: #FFBABA;  
+}  
+.success {  
+    display: none; /* hide the sucess div */  
+    /* add some styling */  
+    padding:10px;  
+    color: #044406;  
+    font-size:12px;  
+    background-color: #B7FBB9;  
+}  
+  
+#contact_logo { vertical-align: middle; }  
+.error img { vertical-align:top; }  
+
+
+

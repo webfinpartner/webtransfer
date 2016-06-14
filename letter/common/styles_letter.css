@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('https://webtransfer-finance.com/letter/common/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('https://webtransfer-finance.com/letter/common/OpenSans-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('https://webtransfer-finance.com/letter/common/OpenSans-Semibold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('https://webtransfer-finance.com/letter/common/OpenSans-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}

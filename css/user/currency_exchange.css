@@ -1,0 +1,1137 @@
+.contentzone {
+    /*float: left;*/
+    /*width: 670px;*/
+    width: 100%;
+}
+.fcwidget {
+    /*background: #FFF none repeat scroll 0% 0%;*/
+    /*border-radius: 4px;*/
+    padding: 25px 30px 10px;
+    /*box-shadow: 0px 2px 4px #C4C2C2;*/
+}
+.widgethometitle {
+    /*border-radius: 4px 0px 0px;*/
+    background: #F5F5F5 none repeat scroll 0% 0%;
+    border-bottom: 1px solid #EBEBEB;
+}
+.widt {
+    color: #929292;
+    font: 600 18px "Open Sans";
+    padding: 20px;
+}
+/* home */
+.homeobmentable{
+    margin: 0 0 30px;
+    background:transparent;
+    /*border-radius:4px;*/
+    padding: 0px;
+    /*box-shadow: 0 2px 4px #c4c2c2;*/
+}
+.widgethometitle{
+    border-radius: 4px 0 0 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ebebeb;
+}
+.widgethometitle2{
+    border-radius: 0 4px 0 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ebebeb;
+}
+.widt{
+    color: #929292;
+    font: 600 18px 'Open Sans';
+    padding: 20px;
+}
+ @-webkit-keyframes input-shadow {
+    0% {
+        color: #929292;
+    }
+    30% {
+        color: orange;
+    }
+    60% {
+        
+        color: red;
+    }
+    100% {
+        color: #929292;
+    }
+  }
+
+@keyframes input-shadow {
+    0% {
+        color: #929292;
+    }
+    30% {
+        color: orange;
+    }
+    60% {
+        
+        color: red;
+    }
+    100% {
+        color: #929292;
+    }
+ }
+
+ .shaddow-blink{
+     -webkit-animation:input-shadow ease-in-out 2s infinite; /* Chrome, Safari, Opera */
+    animation:input-shadow ease-in-out 2s infinite;
+ }
+ 
+.widt1{
+    float:left;
+    width: 240px;
+    padding: 20px 0px 20px 20px;
+    color: #929292;
+    font: 600 18px 'Open Sans';    
+    
+    
+}
+.widt2{
+    float:left;
+    color: #929292;
+    font: 600 18px 'Open Sans';
+    padding: 20px;
+}
+.lefthomecol{
+    float: left;
+    /*width: 32.9%;*/
+    width: 50%;
+    margin: 0 0 0px 0;
+}
+.righthomecol{
+    float: left;
+    /*width: 67.1%;*/
+    width: 50%;
+    margin: 0 0 0px -1px;
+}
+
+.onehline{
+    position: relative;
+    padding: 5px 0 0 10px;
+    display: block;
+    height: 45px;
+
+    text-decoration: none;
+    background:#fff;
+    border-bottom: 1px solid #ebebeb;       
+    border-left:1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
+.onehline.last{
+    border-right: 1px solid #ebebeb;
+}
+
+.onehlineico{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    overflow:hidden;
+    float:left;
+    margin: 0 10px 0 0;
+}
+.onehlinetext{position: relative; float:left; width: 195px; font: 100 14px/40px 'Open Sans'; color: #545454;}
+
+.righthomecol .onehline:hover{background:#f5f5f5;}
+
+.onehline.act{
+    background:#f5f5f5;
+}
+
+.righthomecol .onehline:hover .onehlinetext, .onehline.act .onehlinetext{
+    color: #ff7f66;
+}
+
+a.onehrine{
+    padding: 5px 0 0 10px;
+    display:block;
+    height:45px;
+    cursor:pointer;
+    text-decoration:none;
+    background:#fff;
+    border-bottom: 1px solid #ebebeb;
+    border-left:1px solid #ebebeb;
+    border-right:1px solid #ebebeb;
+}
+a.onehrine.right_border{
+    border-right: 1px solid #ebebeb;
+}
+.righthomecol .onehline:hover{
+    cursor:default;
+}
+a.onehrine.last{
+    border-radius: 0 0 4px 0;
+}
+a.onehrine:hover, a.onehrine.active{background:#f5f5f5;}
+.onehrineico{height:40px;width:40px;overflow:hidden;float:left;margin:0 10px 0 0; border: 1px solid transparent;}
+.onehrinetext{float:left; width: 180px; font: 100 14px/40px 'Open Sans';color:#545454;}
+.onehrinerezerv{position: relative; padding: 5px 0 5px 20px; margin: -5px 0; border-left:1px solid #ebebeb; float:left;width:160px;font: 14px/40px 'Open Sans';color:#545454;}
+a.onehrine.active .onehrinetext, a.onehrine:hover .onehrinetext{
+    color: #ff7f66;
+}
+a.onehrine.active .onehrinerezerv, a.onehrine:hover .onehrinerezerv{
+    color: #ff7f66;
+}
+.zaprosvalutrelvn{
+    display: none;
+    position: absolute;
+    float: none;
+    top: 16px;
+    right: 0px;
+    font: 600 12px 'Open Sans';
+    color: #0ca4a3;
+}
+.zaprosvalutrelvn span{
+    color: #0ca4a3;
+    border-bottom: 1px dotted #0ca4a3;
+}
+.zaprosvalutrelvn span:hover{
+    border-bottom: none;
+}	
+.onehrine:hover .zaprosvalutrelvn{ display: block; }
+.tabhome{display:none;}
+.tabhome.act{display:block;}
+/* end home */
+.widget{
+    margin: 0 0 30px 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #c4c2c2;
+    padding: 25px 30px 15px;
+}
+.widgettitle{
+    margin: -25px -30px 15px;
+    padding: 20px 30px;
+    font: 600 18px/20px 'Open Sans';
+    color: #929292;
+    border-bottom: 1px solid #ebebeb;
+}
+/* widget obmen */
+.widgetobmen{
+    margin: 0 0 30px 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #c4c2c2;
+    padding: 25px 30px 15px;
+}
+.widgetobmentitle{
+    margin: -25px -30px 10px;
+    padding: 20px 30px;
+    font: 600 18px/20px 'Open Sans';
+    color: #929292;
+    border-bottom: 1px solid #ebebeb;
+}
+.wosubmit .rsubmit{
+    display: block;
+    margin: 0 auto;
+}
+.wopredblock{
+    background: #f5f5f5; margin: -10px -30px 10px; padding: 10px 30px;
+}
+.wopredtext{font: 100 11px 'Open Sans';}
+.wopred{ font:14px 'Open Sans';  padding: 0 0 10px 30px; background: url(images/vopr.png) no-repeat 0 0;}
+.wotitle{color:#929292; font: 600 18px 'Open Sans'; margin:0 0 10px;}
+.wolineinput{ padding:0 0 10px 0; width: 225px;}
+.wowarnerr{color:#ff7f66;font: 9px 'Open Sans'; display: none; padding: 0 0 0 2px;}
+.err .wowarnerr{display:block;}
+.wosummtitle{font:12px 'Open Sans'; margin:0 0 4px 0;}
+.wvalname{
+    font-weight: bold;
+}
+.wosumline{padding:0 0 10px 0;}
+.wosumline.err { padding: 0 0 15px 0; }
+.wosumminput{float:left;width:90px;padding:2px 0 2px 0;}
+.wosumminput .rinput{ width: 60px; }
+.wosummnazv{float:left;width:100px;padding:13px 0 0 0;font: 600 13px 'Open Sans';overflow:hidden;}
+.wosummopis{float:left;width:100px; font: 100 10px/11px 'Open Sans'; padding:2px 0 0 0;overflow:hidden; color: #929292;}
+.woschettitle{font:13px 'Open Sans';margin:0 0 2px 0;}
+
+
+.onehline_lable{
+    float: left;
+    width: 30%;
+    margin-top: 9px;
+}
+
+form .sell_fee_and_ammount .onehline_lable,form .buy_fee_and_ammount .onehline_lable
+{
+   width: 33%; 
+}
+
+.form_input {
+    margin-top: 4px;
+    width: 60%;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 7px 6px;
+    background: #FFF none repeat scroll 0% 0%;
+    border: 1px solid #DDD;
+    font-family: Arial,Helvetica,sans-serif;
+    box-shadow: 0px 0px 0px 2px #F4F4F4;
+    color: #333;
+    float: left;
+}
+
+.fcwidget p,
+.fcwidget .fcwtitlevn{
+    text-align: justify;
+    color: #333;
+    font-size: 17px;
+    line-height: 22px;
+}
+.fcwidget .fcwtitlevn{
+    text-align: left;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.table_results{    
+    width: 100%;
+    border-collapse: collapse;
+}
+.table_results,    
+.table_results th,    
+.table_results td{    
+    height: 32px;
+    border: 1px solid #ebebeb;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table_results tr{
+    height: 40px;
+}
+.table_results thead,
+.table_results tr:hover,
+.table_results tr.active{
+    background-color: #F4F4F4;
+    cursor: pointer;
+}
+
+.table_results tr.hbody:hover{
+    background-color: #fff;
+}
+
+.table_results thead{
+    font-weight: 500;
+}
+.table_green_button,
+.table_results .exchange_action,
+.table_results .delete_action,
+.table_results .confirme_action
+{
+    background-position: 0px -425px;
+    border: 1px solid #7CA82A;
+    color: #FFF !important;
+    text-transform: none;
+    background-image: url("/images/ui/usualButtons.png");
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial,Helvetica,sans-serif;
+    /*font-size: 12px;*/
+    font-size: 13px;
+    font-weight: bold;
+    /*line-height: 12px;*/
+    max-height: 29px;
+    white-space: nowrap;
+    padding: 4px;
+    height: 18px;
+    line-height: 18px;
+    /*margin-left: 10px;*/
+    /*width: 120px;*/
+    /*margin-top: 5px;*/
+    width: auto;
+    min-width: 156px;
+}
+
+.table_green_button.table_red_button
+{
+/*    width: 136px; */
+    background-image: url('../../images/ui/usualButtons.png'); 
+    background-position: 0px -170px; 
+    border: 1px solid #9F352B;
+}
+
+.table_results tr.hbody{
+    height: auto;
+}
+.table_results tr.hbody .table_cell{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.table_results .table_row{
+    height: 30px;
+}
+.table_results .table_cell.col2{
+    float: left;
+    width: 25%;
+    text-align: left;
+    padding-left: 34px;
+}
+
+.table_results .table_cell_text{
+    padding-left: 34px;
+    padding-right: 20px;
+}
+
+
+a.active_group_tab{
+    background-color: #f5f5f5;
+    /*width: 170px;*/
+    
+}
+
+a.active_group_tab .onehlinetext{
+    /*font-weight: bold;*/
+}
+
+
+#popup_debit.popup_window_exchange, .popup_window_exchange_visa,
+.popup_window_exchange, .popup_window_error, .popup_window_notification{
+    background: white none repeat scroll 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    left: 31%;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    top: 25%;
+    width: 660px;
+    z-index: 1000;
+}
+
+div.popup_window_error
+{
+    z-index: 1001;
+}
+
+/*.popup_window_error{
+    
+}*/
+
+.redB {
+    background-position: 0px -170px;
+    border: 1px solid #9F352B;
+    color: #FFF;
+}
+
+.problem_popup_div{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.ul_problem li
+{
+    list-style-type: none;
+    text-align: left;
+    
+}
+
+
+
+/************************/
+.problem_chat_messages
+{
+    /*margin-top: 20px;*/
+    margin:20px 15px 15px 15px;
+}
+
+/*.problem_chat_messages select
+{
+     width: 235px;
+}*/
+
+.problem_chat_messages .th_message {
+    background: #efefef none repeat scroll 0 0;
+    border-radius: 5px;
+    display: block;
+    margin: 5px 0px;
+    min-height: 60px;
+    padding: 4px 45px 4px 90px;
+    position: relative;
+}
+
+.problem_chat_messages  .th_message.employer {
+    background: #f4fced none repeat scroll 0 0;
+}
+
+
+.problem_chat_messages .th_message .author {
+    float: left;
+    font-weight: bold;
+    margin-left: -80px;
+    text-align: center;
+    width: 80px;
+}
+
+
+
+
+.problem_chat_messages .th_message .short_date {
+    /*float: left;*/
+    font-size: 10px;
+    /*margin-left: -78px;*/
+    /*padding-top: 18px;*/
+}
+
+.problem_chat_messages .th_message .short_text
+{
+    text-align: left;
+    color: #646464;
+}
+
+
+.problem_chat_messages .alert-info.operator_message{
+    background-image: none;
+    background-repeat: repeat-x;
+    border-color: none;
+}
+
+.problem_chat_messages .alert-info {
+    background-image: linear-gradient(to bottom, #d9edf7 0%, #b9def0 100%);
+    background-repeat: repeat-x;
+    border-color: #9acfea;
+}
+
+
+/*.alert {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}*/
+
+.problem_chat_messages .alert {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: left;
+}
+
+
+.problem_chat_messages .form-control {
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    height: 60px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    width: 96%;
+    
+    
+    font-family: inherit;
+    overflow: auto;
+}
+
+
+.problem_chat_messages select[name="problem_id"], .problem_chat_messages input[name="problem_subject"]
+{
+    width: 99%;
+    margin-bottom: 10px;
+}
+
+.problem_chat_messages select[name="problem_id"]
+{
+    width: 100%;
+}
+
+
+
+.problem_chat_messages .btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    float: left;
+}
+
+.problem_chat_messages .btn-warning {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #ffffff;
+}
+
+.problem_chat_messages .btn-warning {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #ffffff;
+}
+
+.problem_chat_messages .btn-default, 
+.problem_chat_messages .btn-primary, 
+.problem_chat_messages .btn-success, 
+.problem_chat_messages .btn-info, 
+.problem_chat_messages .btn-warning, 
+.problem_chat_messages .btn-danger {
+    border: medium none;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.problem_chat_messages .grey-background{
+    background-image: linear-gradient(to bottom, #bbb 0%, #aaa 100%);
+    background-repeat: repeat-x;
+    border-color: #999;
+}
+
+.problem_chat_messages .btn-warning {
+    background-color: #f26722;
+}
+
+.problem_chat_messages .btn {
+    text-shadow: none;
+}
+
+.problem_chat_messages .btn-success {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #ffffff;
+}
+
+.problem_chat_messages .btn-success {
+    background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+    background-repeat: repeat-x;
+    border-color: #3e8f3e;
+}
+
+.problem_chat_messages .pull-right {
+    float: right;
+}
+
+
+#popup_canceled #confirmation_block{
+    margin-left:26%;
+}
+
+
+#popup_canceled button.button{
+    float: left;
+    width: 100px;
+    margin: 0 0 25px 20px;
+}
+
+.table_results .but{
+    margin-top: 5px;
+    height: 18px;
+    line-height: 18px;
+    width: 150px;
+}
+
+.table_results .but.cancel_action{
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    margin: 5px auto 0 auto;
+    text-align: center;
+    width: 87px;
+    width: 150px;
+}
+
+.select_payment_syctem_container .onehrine{
+    /*border: 1px solid; */
+    /*width: 96%;*/ 
+    width: 96%; 
+    text-align: left; 
+    /*height: 28px;*/ 
+    line-height: 28px;
+    margin-bottom: 3px;
+} 
+.select_payment_syctem_container .onehrine input{
+    margin-right: 16px;
+    margin-top: 13px;
+    float: left;
+    
+}
+.select_payment_syctem_container .onehrine img{
+    position: absolute;
+    /*left: 5px;*/
+    margin-left: -30px; 
+}
+
+.lefthomecolvn.scrol_500, .righthomecolvn.scrol_500, .homeobmentable  .scrol_500 
+{
+    max-height: 500px;
+    overflow: auto;
+    overflow-x:hidden; 
+}
+
+
+.left_container_payment_buy_text, .right_container_payment_buy_text{
+    float:left;
+    /*width: 359px;*/
+    width: 336px;
+}
+
+.left_container_payment_buy_text a, .right_container_payment_buy_text a{
+    display: block;
+}
+
+.input_container_div{
+    height: 52px;
+    line-height: 52px;
+    margin-left: 64px;
+}
+
+.input_container_div.for_test_user {
+    height: 28px;
+    line-height: 26px;
+    float: right;
+    margin-left: 0px;
+}
+
+.input_container_div input{
+    width: 140px;
+    margin-left: 10px;
+}
+
+.input_container_div select{
+    width: 159px;
+    margin-top: 9px;
+    float: right;
+}
+
+
+.sprite_payment_systems {
+    background-image: url('/images/currency_exchange/spritesheet.png');
+    background-repeat: no-repeat;
+    display: block;
+	width: 43px;
+    height: 43px;
+}
+
+
+table.table_results td 
+{
+    text-align: center;
+    padding-left: 0px;
+    
+}
+
+table.table_results td.td_status_action
+{
+    padding: 5px 0;
+}
+
+.table_results td .but
+{
+    margin-left: 0px;
+    color: #fff;
+}
+
+.currency_exchange_bell_for_chat
+{
+    float: left;
+    cursor: pointer;
+}
+.bg_size_half
+{
+    background-size: 198px 218px;
+    margin: 0 10px;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.show_payment_system
+{
+    float:left;
+    width: 50%;
+}
+
+.popup__overlay {
+    position: fixed;
+    left:  0;
+    top:  0;
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.message_to_operator
+{
+    font-weight: bold;
+    color: red;
+}
+
+.problem_chat_file_load
+{
+    text-align: left;
+    margin-top: 10px; 
+    font-size: 12px;
+}
+
+.selec_country_container{
+/*    border-left: 1px solid #ebebeb; 
+    border-right: 1px solid #ebebeb; 
+    border-bottom: 1px solid #ebebeb; 
+    padding: 10px 0 10px 15px;*/
+}
+
+.countent_country_overall_bank_select
+{
+/*    border-left: 1px solid #ebebeb; 
+    border-right: 1px solid #ebebeb; 
+    border-bottom: 1px solid #ebebeb; 
+    padding: 10px 0 10px 15px;*/
+}
+
+.countent_country_overall_bank_select .label
+{
+    display: inline-block;
+    width: 59px;
+}
+
+
+.but.greenbut {
+    background-color: #7ca82a;
+    border: 1px solid #7ca82a;
+    color: #ffffff;
+    
+}
+
+.but.but_read_more
+{
+    height: 0;
+    line-height: 0;
+    padding: 0;
+    width: 75px;
+}
+
+.to_table_ps_cont
+{
+    /*height: 52px;*/
+}
+
+.agree.small_but
+{
+    float: left;
+    height: 5px;
+    line-height: 5px;
+    margin-left: 9px;
+}
+.confirm_docs_caution
+{
+    color: #F00;
+    width: 600px;
+    margin: 10px auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+
+.div_user_payment_data_save .agree
+{
+    padding: 0 10px !important;
+    line-height: 22px;
+    height: 22px;
+}
+
+.left_right_container_payment_buy_text .input_container_div .agree
+{
+    padding: 0 10px !important;
+    line-height: 22px;
+    height: 22px;
+}
+
+.left_right_container_payment_buy_text
+{
+    border: 1px solid #ebebeb;
+    /*border-bottom: none;*/
+    width: 695px;
+}
+
+.left_right_container_payment_buy_text .right_container_payment_buy_text
+{
+    border-right: 3px solid #ebebeb;
+}
+
+.left_right_container_payment_buy_text .right_container_payment_buy_text
+{
+    padding-left: 9px;
+}
+
+.left_right_container_payment_buy_text .left_container_payment_buy_text
+{
+    width: 332px;
+}
+
+
+.show_not_read_messages_span_curr_ex
+{
+    margin-right: 2px;
+    margin-top: 12px;
+}
+
+div#popup_debit.popup_window_exchange h2
+{
+    text-align: center;
+}
+
+div#popup_debit.popup_window_exchange
+{
+    text-align: left;
+    padding: 0 40px !important; 
+    width: 580px;
+}
+
+
+div#popup_exchange_wt, div#popup_exchange
+{
+    text-align: left;
+    padding: 0 40px !important; 
+    width:623px;
+} 
+
+div#popup_exchange_wt form, div#popup_exchange form
+{
+    text-align: center;
+} 
+
+div#popup_exchange_wt h2, div#popup_exchange h2
+{
+    text-align: center;
+}
+
+
+.content > .title {
+    border-bottom: none;
+}
+
+
+
+#various1, #out_send_window a.but, .security a.but
+{
+    color: #fff;
+}
+
+.popup_window_exchange form
+{
+    margin-bottom: 10px;
+}
+
+#currency_exchenge_help_status
+{
+    max-height: 65%;
+    overflow-y: auto;
+}
+
+.table_results .active
+{
+    color: black;
+}
+.container_currency_href
+{
+    clear: left;
+    height: 22px;
+    padding-left: 9px;
+}
+
+.div_user_payment_data_save .agree, .input_container_div .agree
+{
+    height: 22px;
+    line-height: 22px;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+#dop_ps_input_container .cont_requizites_universal_bank .label_text
+{
+/*    display: inline-block; */
+    width: 260px; 
+    /*text-align: right;*/ 
+    /*padding-right: 5px*/
+}
+
+#dop_ps_input_container .label_text
+{
+    display: inline-block; 
+    width: 182px; 
+    text-align: right; 
+    padding-right: 5px;
+}
+
+#dop_ps_input_container .cont_card .label_text
+{
+    width: 113px; 
+    font-size: 16px;
+}
+
+#dop_ps_input_container .cont_card input
+{
+    padding: 2px;    
+    font-size: 15px;
+}
+
+#dop_ps_input_container .dop_ps_input_field_container
+{
+    padding-bottom: 8px;
+}
+
+#dop_ps_input_container .dop_ps_input_field_container .label_text
+{
+    font-size: 16px;
+}
+
+#dop_ps_input_container .dop_ps_input_field_container input
+{
+    padding: 2px;    
+    font-size: 15px;
+}
+
+.selec_country_container select, .countent_country_overall_bank_select select
+{
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px #f4f4f4;
+    color: #656565;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    height: 34px;
+    line-height: 15px;
+    margin: 0 6px;
+    padding-left: 5px;
+    text-align: left;
+    width: 238px;
+    /*width: 600px;*/
+}
+
+.selec_country_container select
+{
+    width: 600px;
+}
+
+.selec_country_container select option
+{
+    width: 600px;
+}
+
+.countent_country_overall_bank_select select option
+{
+    width: 238px;
+}
+
+.add_new_user_payment_system .ress
+{
+    margin-top: 5px;
+}
+
+.hide_data_to_bank
+{
+    margin-top: 3px; 
+    margin-left: 52px; 
+    width: 293px; 
+    text-align: left;
+}
+
+.curency_id_heart_red
+{
+    color:red;
+    font-size:15px;
+}
+
+.select_file_confirm_block
+{
+    margin-top: 15px;
+}
+
+
+.warning_about_file_size
+{
+    color:red;
+}
+
+
+.div_user_payment_data_save.contact
+{
+    padding: 0px;
+}
+
+
+.countent_country_overall_buy_payment_systems center.border_eb, 
+.countent_country_overall_sell_payment_systems center.border_eb
+{
+    border: 1px solid #ebebeb;
+    border-top: none;
+}
+
+.show_name_ps_in_table
+{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 143px;
+}
+
+.show_bank_name_in_sell
+{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 180px;
+}
+
+.container_select_bank .select_country_banks
+{
+    /*width: 238px;*/
+    width: 400px;
+}
+
+.bank_left_short_name
+{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 355px;
+    font-size: 13px;
+}
+
+.swift_code_for_bank_select
+{
+    float: right;
+    font-size: 13px;
+}
+
+.container_currency_href .select_currency_span
+{
+    color:red;
+}
+
+
+.sell_ammount_div_text{
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+}

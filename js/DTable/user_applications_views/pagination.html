@@ -1,0 +1,30 @@
+<div data-dtable="pagination" id="dTable-credit_paginate" class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers">
+    <div>
+    <!--<span id="dTable-credit_previous" class="previous fg-button ui-button ui-state-disabled">Prev</span>-->
+    {% if (first_last) %}
+            <span id="dTable-credit_first" class="toFirst ui-corner-tl ui-corner-bl fg-button ui-button ui-state-disabled" data-dtable="page" data-page="{{ first }}">First</span>
+    {% endif %}
+    <span>
+        {% for page in pages %}
+        <span class="fg-button ui-button {% if (active == page) %}ui-state-disabled{% endif %}" data-dtable="page" data-page="{{ page }}">{{ page }}</span>
+        {% endfor %}
+    </span>
+
+    {% if (first_last) %}
+        <span id="dTable-credit_next" class="next fg-button ui-button" data-dtable="page" data-page="{{ last }}">Last</span>
+    {% endif %}
+    <!--<span id="dTable-credit_last" class="last ui-corner-tr ui-corner-br fg-button ui-button">Last</span>-->
+    </div>
+    <div class="dataTables_length" id="dTable-credit_length">
+        <label>
+            <span class="itemsPerPage">{{def_all.on_page}}:</span>
+            <select name="tableFilter" id="tableFilter" data-dtable="rows-per-page-select">
+                {% for num in rows_per_page_select %}
+                        <option value="{{ num }}" {% if (num == rows_per_page) %}selected="selected"{% endif %}>{{ num }}</option>
+                {% endfor %}
+            </select>
+        </label>
+    </div>
+</div>
+
+

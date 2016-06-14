@@ -1,0 +1,8 @@
+{% for row in rows %}
+    {% if (active == page) %}ui-state-disabled{% endif %}
+    <tr class="row_on_click" data-user-id="{{ row['id_user'] }}" data-id="{{ row['id'] }}">
+        {% for column_id, column_def in columns %}
+            <td class="col_id_{{column_id}}" {{column_id}}="{{ row[column_id] }}">{{ row[column_id] }}</td>
+        {% endfor %}
+    </tr>
+{% endfor %}

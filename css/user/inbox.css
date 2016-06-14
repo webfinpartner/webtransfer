@@ -1,0 +1,76 @@
+.inbox .header .delete {
+    width: 15px!important;  
+    display: inline-block; 
+    float:right;
+    background-image: url('/img/del.png');
+    background-repeat: no-repeat;
+    margin-top: 3px;
+    background-position: 0px 0px;
+    border: 0px;
+}
+
+
+a.delete {
+    margin-left: 10px;
+
+    background-position: 0px -170px;
+    border: 1px solid #9F352B;
+    color: #FFF;
+
+    background-image: url('/images/ui/usualButtons.png');
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    max-height: 29px;
+    white-space: nowrap;
+    padding: 4px;
+    margin-left: 10px;
+}
+
+
+.inbox .header .status {
+    width: 150px;  
+    /*	display: inline-block; 
+       float:right 	
+    */
+}
+
+
+#inbox .empty-inbox,#outbox .empty-inbox { text-align: center; color:  grey;  margin: 5px; background-color: #dddddd; border: 1px solid #454545; border-radius: 5px; padding: 10px }
+.inbox-title {  text-align: center;margin: 10px }
+.inbox { border:1px solid #454545; margin: 5px; }
+.inbox .content {display: none; padding: 15px;}
+.inbox .author-info {}
+.inbox .header {cursor: pointer; padding: 10px; outline:1px solid #454545;}
+.inbox .header .date{ width: 150px;  display: inline-block}
+
+.inbox .header .title{ width: 350px;  display: inline-block; }
+.inbox .header.new{background-color: #dddddd}
+
+.action  {
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.inbox .action .cancel, .inbox .action .delete { /* Стиль кнопки Отменить*/
+    cursor:pointer; 
+    /* color: red; */
+}
+
+
+.inbox .action .agree { /* Стиль кнопки Одобрить*/
+    cursor:pointer; 
+    /* color: green */ 
+}
+.inbox .cause-content {}
+
+
+#content .author-info p{
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0;
+}

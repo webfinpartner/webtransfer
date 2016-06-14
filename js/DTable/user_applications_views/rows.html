@@ -1,0 +1,26 @@
+{% for row in rows %}
+    {% if (active == page) %}ui-state-disabled{% endif %}
+    <tr data-user-id="{{ row['id_user'] }}" data-id="{{ row['id'] }}" data-bonus="{{ row['bonus'] }}">
+        {% for column_id, column_def in columns %}                    
+                {% if ("garant" == column_id) %}
+                    {% if (0 == row[column_id]) %}
+                        <td data-dtable-column="{{ column_id }}" class="blue">S{% if ( row['bonus'] == 2 ) %}&#10084;{% endif %}{% if ( row['bonus'] == 7 ) %}<img src="/images/vcard-sm.png">{% endif %}                </td>
+                    {% else %}
+                        {% if (1 == row[column_id]) %}
+                            <td data-dtable-column="{{ column_id }}" class="red">G{% if ( row['bonus'] == 2 ) %}&#10084;{% endif %}{% if ( row['bonus'] == 7 ) %}<img src="/images/vcard-sm.png">{% endif %}                </td>
+                        {% else %}
+                            {% if ("SD" == row[column_id]) %}
+                                <td data-dtable-column="{{ column_id }}" class="blue">D{% if ( row['bonus'] == 2 ) %}&#10084;{% endif %}{% if ( row['bonus'] == 7 ) %}<img src="/images/vcard-sm.png">{% endif %}                </td>
+                            {% else %}
+                                {% if ("GD" == row[column_id]) %}
+                                    <td data-dtable-column="{{ column_id }}" class="red">D{% if ( row['bonus'] == 2 ) %}&#10084;{% endif %}{% if ( row['bonus'] == 7 ) %}<img src="/images/vcard-sm.png">{% endif %}                </td>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% else %}
+                <td data-dtable-column="{{ column_id }}">{{ row[column_id] }}</td>
+                {% endif %}
+        {% endfor %}
+    </tr>
+{% endfor %}

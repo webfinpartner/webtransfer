@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Webtransfer - Finance</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/user/jquery.cookie.js"></script>
+</head>
+<!-- This landing page developed by grim6681@gmail.com | web-geek.net-->
+<body>
+ 
+<div id="header_wrap"> 
+<div id="header_top"></div>
+<div id="header_body">
+  <div id="logo_handler">
+  <div id="logo"><img src="img/logo.jpg" width="176" height="117"  alt=""/></div>
+  <div id="comment"><span id="comment_title">Наш принцип - сложный процент!</span>
+  <br><br>
+  Сложный процент - это восьмое Чудо Света.<br>
+Тот, кто понимает это - зарабатывает...<br>
+Тот, кто не понимает - платит!<br>
+<strong>Альберт Эйнштейн</strong>
+  </div></div>
+  <div class="clear"></div>
+
+  <div id="header_content">
+    <div id="header_grafik"><img src="img/header_grafik.png" width="473" height="412"  alt=""/></div>
+	<div id="calculate_handler"><div id="calculate_content">
+	<div id="calculate_but"><span>Рассчитать стоимость</span></div>
+	<center>
+	
+					<br>
+					<!-- start odnoklassniki -->
+
+					<link href="css/odnoklassniki.css" rel="stylesheet">
+					<script src="js/user/odnoklassniki.js" type="text/javascript" charset="utf-8"></script><script id="ScriptID.odkl.oauth84802"></script>
+					<script>
+ 					$(function(){
+ 						
+ 						$('.social-odnoklassniki').click(function(){
+ 							ODKL.Oauth2(this, '198322944', 'VALUABLE ACCESS', 'https://webtransfer-finance.ru/login/odnoklassniki' );
+ 							return false;
+ 						})
+ 						
+ 						$('.social-vkontakte').click(function(){
+ 							window.location = "http://oauth.vk.com/authorize?client_id=3926553&scope=friends&display=popup&v=5.2&redirect_uri=https://webtransfer-finance.ru/login/vkontakte&response_type=code";
+ 							 return false;
+ 						})
+						$('.social-mail_ru').click(function(){
+ 							window.location = "https://connect.mail.ru/oauth/authorize?client_id=713966&response_type=code&redirect_uri=https://webtransfer-finance.ru/login/mail_ru";
+ 							 return false;
+ 						})
+ 						
+ 						$('.social-google_plus').click(function(){
+ 							window.location = "https://accounts.google.com/o/oauth2/auth?redirect_uri=https://webtransfer-finance.ru/login/google_plus&response_type=code&client_id=556330387880.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"; 
+ 							return false;
+ 						})
+ 						
+ 						$('.social-twitter').click(function(){
+ 							window.location = "https://webtransfer-finance.ru/login/twitter"; 
+							return false;
+ 						})
+						$('.vklad').click(function(){
+							$.cookie('social-vklad','1',{path:'/'});
+						})
+ 					
+ 					})
+ 					</script>
+					<a href="#" class="social-vkontakte vklad"><img src="img/icons/vk.png"></a>
+					<a class="social-odnoklassniki vklad" href="#"><img src="img/icons/ok.png"></a>
+					<img src="img/icons/fb.png" class="social-facebook vklad" style="cursor:pointer;">
+					<a href="#" class="social-twitter vklad"><img src="img/icons/tw.png"></a>
+					<a href="#" class="social-mail_ru vklad"><img src="img/icons/mr.png"></a>
+					<a href="#" class="social-google_plus vklad"><img src="img/icons/gp.png"></a>
+</center>
+<!--  start facebook -->
+<div id="fb-root"></div>
+	   <script type="text/javascript">
+  window.fbAsyncInit = function() {
+	  //Initiallize the facebook using the facebook javascript sdk
+     FB.init({ 
+       appId:'526472357444368', // App ID 
+	   cookie:true, // enable cookies to allow the server to access the session
+       status:true, // check login status
+	   xfbml:true, // parse XFBML
+	   oauth : true //enable Oauth 
+     });
+   };
+   //Read the baseurl from the config.php file
+   (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+	//Onclick for fb login
+ $(function(){$('.social-facebook').click(function(e) {
+    FB.login(function(response) {
+
+	  if(response.authResponse) {
+
+		  parent.location ='https://webtransfer-finance.ru/login/facebook'; //redirect uri after closing the facebook popup
+	  }
+ },{scope: 'email,read_stream,publish_stream,user_birthday,user_location,user_work_history,user_hometown,user_photos'}); //permissions for facebook
+});});
+   </script>
+	
+	<!--  end facebook -->
+	<div id="calculate_txt"><strong>С подробными условиями</strong> <br>
+вы можете ознакомиться в личном кабинете,
+выполнив вход с помощью одной из
+социальных сетей.<//div>
+	</div></div>
+</div>
+</div>
+</div></div>
+<div id="content_wrap">
+<div id="content_left">
+<h1>Инвестиции в микрокредиты.</h1>
+Хотите получать прибыль больше, чем проценты по банковским
+вкладам, но не хотите рисковать на валютном рынке и покупать 
+акции? Тогда вкладывайте в микрокредиты!
+<div class="content_features">
+<strong>Хотите получать прибыль больше? </strong><br>
+Чем проценты по банковскимвкладам, но не хотите
+рисковать на валютном рынке и покупать акции?</div>
+<div class="content_features">
+<strong>Хотите получать прибыль больше? </strong><br>
+Чем проценты по банковскимвкладам, но не хотите
+рисковать на валютном рынке и покупать акции?</div>
+</div>
+<div id="content_right">
+<h1>Инвестиции в микрокредиты.</h1>
+Хотите получать прибыль больше, чем проценты по банковским
+вкладам, но не хотите рисковать на валютном рынке и покупать 
+акции? Тогда вкладывайте в микрокредиты!
+<div class="content_features">
+<strong>Хотите получать прибыль больше? </strong><br>
+Чем проценты по банковскимвкладам, но не хотите
+рисковать на валютном рынке и покупать акции?</div>
+
+<div class="content_features">
+<strong>Хотите получать прибыль больше? </strong><br>
+Чем проценты по банковскимвкладам, но не хотите
+рисковать на валютном рынке и покупать акции?</div>
+</div>
+</div>
+
+<div id="footer">
+<a href="/page/about-company">О проекте</a>
+	&nbsp;|&nbsp;
+	<a href="/page/about-company/kak-rabotaem">Как это работает</a>
+	&nbsp;|&nbsp;
+	<a href="/page/partnership">Партнерам</a>
+	&nbsp;|&nbsp;
+	<a href="/page/about-company/questions">Вопросы и ответы</a>
+	&nbsp;|&nbsp;
+	<a href="https://webtransfer.com/ru/contact.html" target="_new">Связаться с нами</a>
+<div id="copyright">Webtransfer © 2006-2013. Все права защищены.<br>
+<a href="/page/about-company/pravila-raboti">Правила и Условия использования</a> </div>
+</div>
+</body>
+</html>

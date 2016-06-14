@@ -1,0 +1,19 @@
+{% if 1 == value %}
+  {% if "true" == values["can_sell"]%}
+    <span title={{_e('Продать')}} class='bn_sellCertificat but agree' style='cursor: pointer;margin:2px 0px 0px;padding:2px 4px;' data-id='{{values["debit"]}}' data-summ='{{values["summa"]}}' data-out_summ='{{values["out_summ"]}}'>
+        S
+    </span>
+  {% endif %}
+    <span title={{_e('Редактировать')}} class='bn_editExchangeCertificat but bluebut' style='cursor: pointer;margin:2px 0px 0px;padding:2px 4px;' data-id='{{values["id"]}}' data-summ='{{values["summa"]}}' data-out_summ='{{values["out_summ"]}}'>
+        $
+    </span>
+    <span title={{_e('Удалить')}} class='bn_delExchangeCertificat but cancel' style='cursor: pointer;margin:2px 0px;padding:2px 4px;' data-id='{{values["id"]}}'>
+       X
+    </span>
+{% elif 2 == value %}
+    &nbsp;
+{% else %}
+    <span title={{_e('Купить')}} class='bn_bayExchangeCertificat but agree' style='cursor: pointer;margin:2px 0px 0px;padding:2px 4px;'>
+        {{_e('Купить')}}
+    </span>
+{% endif %}

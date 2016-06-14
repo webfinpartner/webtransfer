@@ -1,0 +1,102 @@
+{% macro print_attr(attr) %}
+{% if attr %}
+{% for name, value in attr %} {{ name }}="{{ value }}"{% endfor %}
+{% endif %}
+{% endmacro %}
+
+    <div id="dTable-credit_wrapper" class="dataTables_wrapper">
+        {% if (pagination or search or has_column_filter) %}
+        <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+            {% if pagination %}
+            <div data-dtable="pagination" id="dTable-credit_paginate" class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers">
+            </div>
+            <div data-dtable="loading-container" style="float:right;position:relative;top:-41px;"></div>
+            {% endif %}
+            {% if (search or has_column_filter) %}
+            <div id="dTable-credit_filter" class="dataTables_filter">
+                {% if search %}
+<!--                <label><span class="itemsPerPage">{{def_all.search_name}}</span>
+                    <input placeholder="{{ search.placeholder }}" type="text"  data-dtable="search" class="search-input"/>
+                    <div class="srch"></div>
+                </label>-->
+                {% endif %}
+                <div class="search-buttons">
+                    <a href="#" class="search-buttons_button s" id="garant"><span>{{def_all.button}}</span><img src="/images/garant_stat0.png" alt=""/></a>
+                    <a href="#" class="search-buttons_button g" id="standart"><span>{{def_all.button}}</span><img src="/images/garant_stat1.png" alt=""/></a>
+                    <a href="#" class="search-buttons_button gd" id="garant-d"><span>{{def_all.button}}</span><img src="/images/garant-direct.png" alt=""/></a>
+                    <a href="#" class="search-buttons_button sd" id="standart-d"><span>{{def_all.button}}</span><img src="/images/standart-direct.png" alt=""/></a>
+                    <select id="search_select_box">
+                        <option value="all">Все</option>      
+                        <option value="BANK_CARD">Банковская карта</option>                        
+                        <option value="BANK_ACCOUNT">Банковский счет</option>                        
+                        <option value="EWALLET">Электронный кошелек</option>                        
+                        <option value="card">Webtransfer VISA</option>                        
+                    </select>
+
+                    
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        <table id="dTable-credit" class="dTable">
+            <thead>
+                {% if title %}
+                    <tr>
+                        <th rowspan="1" colspan="6">{{title}}</th>
+                    </tr>
+                {% endif %}
+
+                {% if has_column_title %}
+                <tr>
+                    {% for column_id, column_def in columns %}
+                    <th class="ui-state-default" style="cursor: pointer; text-align: center;">
+                        {% if column_def.title %}
+                            <div class="DataTables_sort_wrapper">
+                                <span>{{ column_def.title }}{% if column_def.order %}<span data-dtable="order.both" data-dtable-column="{{ column_id }}">↓↑</span>{% endif %}</span>
+                            </div>
+                        {% endif %}
+                    </th>
+                    {% endfor %}
+                </tr>
+                {% endif %}
+                {# =====================================
+                    COLUMN FILTER
+                    filter column by typing in the input field
+                   ===================================== #}
+                {% if has_column_filter %}
+                    <tr>
+                        {% for column_id, column_def in columns %}
+                            {% if column_def.filter %}
+                                <th class="ui-state-default">
+                                    <input type="text" class="form-control" placeholder="{{ column_def.filter.placeholder }}"
+                                        data-dtable="filter" data-column="{{ column_id }}" style="width: 80%">
+                                </th>
+                            {% else %}
+                                <th></th>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endif %}
+            </thead>
+
+            <tbody data-dtable="table">
+            </tbody>
+        </table>
+        {% if (pagination or search) %}
+        <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+            {% if search %}
+<!--            <div id="dTable-credit_filter" class="dataTables_filter">
+                <label><span class="itemsPerPage">{{def_all.search_name}}</span>
+                    <input placeholder="{{ search.placeholder }}" type="text"  data-dtable="search"/>
+                    <div class="srch"></div>
+                </label>
+            </div>-->
+            {% endif %}
+            {% if pagination %}
+            <div data-dtable="pagination" id="dTable-credit_paginate" class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers">
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>

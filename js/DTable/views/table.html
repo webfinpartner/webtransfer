@@ -1,0 +1,101 @@
+{% macro print_attr(attr) %}
+    {% if attr %}
+        {% for name, value in attr %} {{ name }}="{{ value }}"{% endfor %}
+    {% endif %}
+{% endmacro %}
+
+<div class="panel panel-default">
+    {# TITLE #}
+    {% if title %}
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ title }}</h3>
+        </div>
+    {% endif %}
+
+    {# SEARCH & PAGINATION #}
+    {% if (pagination or search) %}
+        <div class="panel-body">
+
+            {# =====================================
+                PAGINATION
+                data-dtable="pagination" attr is required for the root html elem of the pager.
+               ===================================== #}
+            {% if pagination %}
+                <div class="pull-left col-lg-6" data-dtable="pagination"></div>
+            {% endif %}
+
+            {# =====================================
+                SEARCH
+                only one search field supported for a table (this time):
+                data-dtable="search-input" for the input text field
+               ===================================== #}
+            {% if search %}
+                <div class="pull-right col-lg-6">
+                    <input type="text" class="form-control" placeholder="{{ search.placeholder }}" data-dtable="search">
+                </div>
+            {% endif %}
+
+            <div class="clearfix"></div>
+        </div>
+    {% endif %}
+
+    <table class="table table-striped table-bordered table-hover">
+        {# COLUMNS & FILTER #}
+        <thead>
+            {% if has_column_title %}
+                <tr>
+                    {% for column_id, column_def in columns %}
+                        <th{{ print_attr(column_def.html_tag_attr) }}>
+                            {% if column_def.title %}
+                                {{ column_def.title }}
+                                {# =====================================
+                                    ORDER BY
+                                    active order by will get .active class
+                                   ===================================== #}
+                                {% if column_def.order %}
+                                    <div class="order-by" data-dtable="order">
+                                        <a href="#" class="glyphicon glyphicon-chevron-up" data-dtable="order.asc" data-dtable-column="{{ column_id }}"></a>
+                                        <a href="#" class="glyphicon glyphicon-chevron-down" data-dtable="order.desc" data-dtable-column="{{ column_id }}"></a>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        </th>
+                    {% endfor %}
+                </tr>
+            {% endif %}
+            {# =====================================
+                COLUMN FILTER
+                filter column by typing in the input field
+               ===================================== #}
+            {% if has_column_filter %}
+                <tr>
+                    {% for column_id, column_def in columns %}
+                        {% if column_def.filter %}
+                            <td>
+                                <input type="text" class="form-control" placeholder="{{ column_def.filter.placeholder }}"
+                                    data-dtable="filter" data-column="{{ column_id }}">
+                            </td>
+                        {% else %}
+                            <th></th>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endif %}
+            {# LOADING INDICATOR #}
+            <tr><td colspan="20" data-dtable="loading-container" style="text-align: center; padding: 0; border: none"></td></tr>
+        </thead>
+        <tbody data-dtable="table">
+
+        </tbody>
+    </table>
+
+    {# =====================================
+        pagination, see prev example
+       ===================================== #}
+    {% if pagination %}
+        <div class="panel-footer">
+            <div class="row" data-dtable="pagination"></div>
+        </div>
+    {% endif %}
+
+</div>

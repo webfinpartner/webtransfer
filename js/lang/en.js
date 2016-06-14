@@ -1,0 +1,50 @@
+_lang = {
+    'Нельзя отправить пустое сообщение':'You can not send empty message',
+    'Пароль успешно изменен.':'The password is successfully changed',
+    'Старый пароль не совпадает с текущим':'The old password is not matching with the new one',
+    'Ваш аккаунт заблокирован':'Your account is blocked',
+    'Ваш аккаунт на рассмотрении':'Your account is under review',
+    'Логин или пароль ошибочны':'Login or password is incorrect',
+    'Вложить деньги':'Invest funds',
+    'Получить деньги':'Receive funds',
+    'Стать участником':'Become a membe',
+    'Имя<span class="req">*</span>':'First Name<span class="req">*</span>',
+    'Фамилия<span class="req">*</span>':'Last Name<span class="req">*</span>',
+    'Вы уверены что хотите отменить заявку?': 'Are you sure you want to cancel your application?',
+    'Вы уверены что хотите вернуть заявку на рынок и расторгнуть пре сделку?':'Are you sure you want to return your application to exchange and cancel the deal?',
+    'Продав сертификат Вы получаете гарантированный минимальный доход \n и права по выданному кредиту переходят гарантийному фонду.\n\nВы уверены что хотите продать  кредитный  сертификат?':'By selling your certificate you receive guaranteed minimum income \n and rights of the loan issuer are transfered to the Security Fund. \n\n Are you sure you want to sell your Credit Certificate?',
+    'Неверный ответ от сервера. Перезагрузите страницу.': 'Invalid response from the server. Please reload the page.',
+    'Неизвестная ошибка. Обратитесь в службу поддержки.': 'Unknown error. Contact your support.',
+    'Двух этапная авторизация': 'The two-step verification',
+    'Код подтверждения': 'Confirmation Code',
+//    'Запрос кода': 'Code request',
+    'Запрос кода': 'Request a code',
+    "Вы уверены что хотите удалить  документ?": 'Are you sure you want to delete the document?',
+    'Изображение успешно удалено': 'Image successfully deleted',
+    'Вы не можете удалить изображение которое было  одобренно  модератором. Загрузите новое фото. И дождитесь  проверки  модератора.': 'You can not remove an image which has been the approval by the moderator. Upload a new photo. And the rain moderated.',
+    'Не загружено': 'not uploaded',
+    'Продать': 'Sell',
+    'Купить': 'Buy',
+    'Редактировать': 'Edit',
+    'Удалить': 'Delete',
+    'Новое сообщение' : 'New message',
+    'На рассмотрении': 'Under consideration',
+    'Прочитано': 'Read',
+    'Отклонен': 'Cenceled',
+    'Входящие уведомления не обнаружены': 'Incoming notifications not found',
+    'Исходящие уведомления не обнаружены': 'Outgoing notification not found',
+    'Отправить': 'Send',
+    'Далее': 'Next',
+    'Назад': 'Previous',
+    'сек.': 'sec.',
+    'wrong_responce' : 'Wrong server responce. Please, try do it again.',
+    'wait_processing_request' : 'Please wait a moment.<br> We are processing your request.',
+    'Данное направление временно недоступно. Ведутся работы.' : 'This method of exchange is temporarily unavailable. It is under reconstruction.'
+//    '': '',
+}
+
+function _e(t){
+    return ((undefined != _lang[t]) ? _lang[t] : t);
+}
+
+

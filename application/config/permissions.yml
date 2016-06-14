@@ -1,0 +1,3091 @@
+#<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+# Permisions file for $GLOBALS["WHITELABEL_NAME"]
+# list of site pages
+# @author esb
+# @date 29.07.2014
+#
+# Правила создания:
+# 1) дети прав должны содержать всю родословную родителей через точку!    например admin.users.user.userId.contactsInfoGroup = главный родитель.группа.группа.страница.елемент на странице
+# 2) группы вспомогательные не обязательно должны входить в родословную
+# 3) основная группа обязательно входит в родословную
+
+main:
+    type: "group"
+    display: "hide"
+    items:
+        admin.settings: "Управление Сайтом"
+        admin.credit: "Кредитование"
+        admin.users: "Клиенты"
+        admin.partner: "Партнеры"
+        admin.support: "Служба Поддержки"
+        admin.profile: "Профайл"
+        admin.messege: "Заявки"
+        admin.payment.autoCheckPayout: 'автомат'
+        admin.payment.cardExchangePay: 'автомат'
+#    url: "/opera"
+
+top:
+    type: "group"
+    display: "hide"
+    items:
+        admin.profile: "Профайл"
+        admin.messege: "Заявки"
+#        admin.logout: "Выйти"
+
+middle:
+    type: "group"
+    display: "hide"
+    items:
+        admin.users.block: ""
+        admin.support.block: ""
+        admin.users_doc: ""
+        admin.users.users_block: ""
+        admin.credit.block: ""
+
+content:
+    type: "group"
+    display: "hide"
+    items:
+        admin.users.user.userId.del: ""
+        admin.users.user.userId.chengeStatus: ""
+        admin.users.user.userId.contactsInfo: ""
+        admin.users.user.userId.doc: ""
+        admin.users.user.userId.balance: ""
+        admin.users.user.userId.summ: ""
+        admin.users.user.userId.limit: ""
+        admin.users.user.userId.social: ""
+        admin.users.user.userId.messege: ""
+        admin.users.user.userId.suppurt: ""
+        admin.users.user.userId.getCredits: ""
+        admin.users.user.userId.getCreditsArchive: ""
+        admin.users.user.userId.getInvests: ""
+        admin.users.user.userId.getInvestsArchive: ""
+        admin.users.user.userId.getTransactions: ""
+        admin.users.user.userId.getTransactionsArchive: ""
+        admin.users.user.userId.getPartners: ""
+        admin.users.user.userId.docRequest: ""
+        admin.users.user.userId.blockMoney: ""
+        admin.users.downloadEmail: ""
+        admin.payment.delete: ""
+        admin.payment.payout.payoutConferm: ""
+        admin.payment.payout.payoutVerify: ""
+        admin.payment.сonfermInvestArbitrage: ""
+
+
+#admin.invest:
+#    url: "/opera/invest"
+
+admin.profile:
+    name: "Профайл"
+    display: ""
+    type: "page"
+    url: "/opera/profile"
+
+admin.messege:
+    name: "Заявки"
+    display: ""
+    type: "group"
+    items:
+        admin.credit.news: "Заявка на кредит"
+        admin.credit.news.2: "Заявка на вклад"
+        admin.support.feedback.new_feeds: "Заявка на поддержку"
+
+admin.users_doc:
+    name: "Документы"
+    display: ""
+    type: "group"
+    items:
+        admin.users.doc_change: "Заявки на изменение"
+
+admin.users.save_max_count_p2p_wt_orders:
+    name: "Установка пользователю возможность неограниченно брать Р2Р заявки"
+    display: ""
+    type: "page"
+    url: "/opera/users/save_max_count_p2p_wt_orders"
+
+admin.users.save_p2p_vip_orders:
+    name: "Установка приоритета Р2Р-заявок в происке при прочих равных возможностях"
+    display: ""
+    type: "page"
+    url: "/opera/users/save_p2p_vip_orders"
+
+admin.users.users_block:
+    name: "Блокировка пользователей"
+    display: ""
+    type: "page"
+    url: "/opera/users/users_block"
+    items:
+        admin.users.users_block.block: ""
+        admin.users.users_block.ip: ""
+
+admin.users.users_block.block:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/users_block/block"
+
+admin.users.users_block.ip:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/users_block/*"
+
+
+admin.users.block:
+    name: ""
+    display: ""
+    type: "group"
+    items:
+        admin.users.all: ""
+
+admin.support.block:
+    name: ""
+    display: ""
+    type: "group"
+    items:
+        admin.support.feedback.new.feeds: ""
+
+admin.credit.block:
+    name: ""
+    display: ""
+    type: "group"
+    items:
+        admin.credit.news: ""
+        admin.credit.expired: ""
+#
+#
+#
+#
+#
+#
+#
+admin.support:
+    name: "Служба Поддержки"
+    display: ""
+    type: "group"
+    items:
+        admin.support.feedback: ""
+        admin.support.feedback.close: ""
+        admin.support.feedback.open: ""
+        admin.support.feedback.delete: ""
+        admin.support.feedback.new_feeds: "Новая Заявка на поддержку"
+        admin.support.feedback.all_feeds: "База запросов"
+        admin.support.feedback.admin_support: ""
+        admin.support.feedback.admin_support_ask: ""
+        admin.support.feedback.admin_vip_chats: ""
+        admin.support.feedback.admin_vip_users: ""
+        admin.faq.all: "FAQ"
+        admin.support.send_notices: ""
+
+admin.support.feedback:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/"
+
+admin.support.feedback.close:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/close/"
+
+admin.support.feedback.open:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/open/"
+
+admin.support.feedback.delete:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/delete/"
+
+admin.support.feedback.new_feeds:
+    name: "Новая Заявка на поддержку"
+    display: ""
+    type: "page"
+    url: "/opera/feedback/new_feeds"
+
+admin.support.feedback.all_feeds:
+    name: "База запросов"
+    display: ""
+    type: "page"
+    url: "/opera/feedback/all_feeds"
+
+admin.support.feedback.admin_support_ask:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/admin_support_ask"
+    items:
+        admin.support.feedback.admin_support_topic: ""
+
+admin.support.feedback.admin_support:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/admin_support"
+    items:
+        admin.support.feedback.admin_support_topic: ""
+
+admin.support.feedback.admin_support_topic:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/admin_support_topic/"
+    items:
+        admin.support.feedback.admin_support_topic.ajaxSendQuestion: ""
+        admin.support.feedback.admin_support_topic.closeTopic: ""
+
+admin.support.feedback.admin_support_topic.ajaxSendQuestion:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/feedback/ajaxSendQuestion"
+
+admin.support.feedback.admin_support_topic.closeTopic:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/feedback/closeTopic/"
+
+admin.support.feedback.admin_vip_chats:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/admin_vip_chats"
+    items:
+        admin.support.feedback.admin_vip_chats.admin_vip_chat: ""
+
+admin.support.feedback.admin_vip_chats.admin_vip_chat:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/admin_vip_chat/*"
+    items:
+        admin.support.feedback.admin_vip_chats.admin_vip_chat.send_admin_vip_message: ""
+        admin.support.feedback.admin_vip_chats.admin_vip_chat.get_last_vip_message: ""
+
+admin.support.feedback.admin_vip_chats.admin_vip_chat.send_admin_vip_message:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/send_admin_vip_message"
+
+admin.support.feedback.admin_vip_chats.admin_vip_chat.get_last_vip_message:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/feedback/get_last_vip_message"
+
+admin.support.feedback.admin_vip_users:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/vip_users"
+    items:
+        admin.support.feedback.admin_vip_chats.admin_vip_users.admin_vip_user: ""
+
+admin.support.feedback.admin_vip_users.admin_vip_user:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/vip_user/"
+
+admin.faq:
+    name: "FAQ"
+    display: ""
+    type: "page"
+    url: "/opera/faq/"
+    items:
+        admin.faq.all: ""
+        admin.faq.delete: ""
+        admin.faq.create: ""
+        admin.faq.unicUrl: ""
+        admin.faq.deleteFoto: ""
+        admin.faq.getFoto: ""
+        admin.faq.delSesFoto: ""
+        admin.faq.addFoto: ""
+
+
+admin.faq.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/faq/all"
+
+admin.faq.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/delete/"
+
+admin.faq.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/create"
+
+admin.faq.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/unic_url/"
+
+admin.faq.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/delete_foto/"
+
+admin.faq.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/get_foto"
+
+admin.faq.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/del_ses_foto"
+
+admin.faq.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/faq/add_foto/"
+
+#
+#
+#
+#
+#
+#
+#
+admin.users:
+    name: "Клиенты"
+    display: ""
+    type: "group"
+#    url: "/opera/users"
+    items:
+        admin.users.news: "Заявки на Клиентство"
+        admin.users.all: "База Клиентов"
+        admin.users.all_profiles: "Заявки на изменение данных"
+        admin.users.doc_change: "Заявки на изменение документов"
+        admin.payment: "Транзакции"
+        admin.payment.sendmoney: "Переводы"
+        admin.payment.verifySS: "Проверка СБ"
+        admin.payment.payout: "Заявки на вывод"
+        admin.payment.payout_payed: "Вывод"
+        admin.payment.autoCheckPayout: "Авто проверка"
+        admin.users.send: ""
+        admin.users.social: ""
+        admin.users.failure: ""
+        admin.users.profile: ""
+        admin.users.take: ""
+        admin.users.take2: ""
+        admin.users.doc: ""
+        admin.users.active: ""
+        admin.users.trans_graph: ""
+        admin.payment.payoutnew: ""
+        admin.payment.payoutnewno: ""
+        admin.payment.merchant: ""
+
+admin.users.user:
+    name: ""
+    display: ""
+    type: "group"
+    items:
+        admin.users.user.userId: ""
+        admin.users.user.userId.contactsInfo: ""
+        admin.users.user.userId.doc: ""
+        admin.users.user.userId.balance: ""
+        admin.users.user.userId.summ: ""
+        admin.users.user.userId.limit: ""
+        admin.users.user.userId.social: ""
+        admin.users.user.userId.messege: ""
+        admin.users.user.userId.suppurt: ""
+        admin.users.user.userId.getCredits: ""
+        admin.users.user.userId.getCreditsArchive: ""
+        admin.users.user.userId.getInvests: ""
+        admin.users.user.userId.getInvestsArchive: ""
+        admin.users.user.userId.getTransactions: ""
+        admin.users.user.userId.getTransactionsArchive: ""
+        admin.users.user.userId.getPartners: ""
+        admin.users.user.userId.block: ""
+        admin.users.user.userId.blockMoney: ""
+
+
+admin.users.user.userId:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/"
+    items:
+        admin.users.user.userId.del: ""
+        admin.users.user.userId.chengeStatus: ""
+
+admin.users.user.userId.del:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/users/delete/"
+
+admin.users.user.userId.chengeStatus:
+    name: ""
+    display: ""
+    type: "group"
+    items:
+        admin.users.user.userId.chengeStatus.close: ""
+        admin.users.user.userId.chengeStatus.active: ""
+
+admin.users.user.userId.chengeStatus.close:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/users/close/"
+
+admin.users.user.userId.chengeStatus.active:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/users/active/"
+
+admin.users.user.userId.contactsInfo:
+    name: ""
+    display: ""
+    type: "resource"
+    items:
+        admin.users.user.userId.contactsInfo.do: ""
+        admin.users.user.userId.contactsInfo.rate: ""
+        admin.users.user.userId.contactsInfo.parent: ""
+        admin.users.user.userId.contactsInfo.skype: ""
+        admin.users.user.userId.contactsInfo.email: ""
+        admin.users.user.userId.contactsInfo.pass: ""
+        admin.users.user.userId.contactsInfo.submit: ""
+        admin.users.user.userId.contactsInfo.tab: ""
+
+admin.users.user.userId.contactsInfo.do:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.contactsInfo.rate:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.contactsInfo.skype:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.contactsInfo.email:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.contactsInfo.pass:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.contactsInfo.submit:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.contactsInfo.tab:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.doc:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.social:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.messege:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.balance:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.summ:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.limit:
+    name: ""
+    display: ""
+    type: "resource"
+
+admin.users.user.userId.suppurt:
+    name: ""
+    display: ""
+    type: "resource"
+
+
+admin.users.user.userId.getCredits:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_cretits/"
+
+admin.users.user.userId.getSumByBonus:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/user_sum_by_bonus_get/*"
+admin.users.user.userId.getInvests:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_invests/"
+admin.users.user.userId.getTransactions:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_transactions/"
+admin.users.user.userId.getPartners:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_partners/"
+
+admin.users.user.userId.getCreditsArchive:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_cretits_archive/"
+admin.users.user.userId.getInvestsArchive:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_invests_archive/"
+admin.users.user.userId.getTransactionsArchive:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/get_transactions_archive/"
+admin.users.user.userId.docRequest:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/doc_request/"
+admin.users.user.userId.blockMoney:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/blockManey"
+admin.users.user.userId.blockChilds:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/blockChilds/"
+
+admin.users.news:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/news"
+
+admin.users.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/all"
+    items:
+        admin.users.all.switchUserStatus: ""
+        admin.users.all.writeCause: ""
+
+admin.users.all.switchUserStatus:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/switchUserStatus/"
+
+admin.users.all.writeCause:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/writeCause/"
+
+
+admin.users.arbitration:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/arbitration"
+
+admin.users.all_profiles:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/all_profiles"
+
+admin.users.doc_change:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/doc_change"
+
+admin.users.send:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/send/"
+
+admin.users.social:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/social"
+
+admin.users.failure:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/failure/"
+
+admin.users.profile:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/profile/"
+
+admin.users.take:
+    name: "ERROR MANY ARG"
+    display: ""
+    type: "page"
+    url: "/opera/users/take/*"
+
+admin.users.take2:
+    name: "ERROR MANY ARG"
+    display: ""
+    type: "page"
+    url: "/opera/users/take2/*"
+admin.users.export_transactions_user:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/export_transactions_user"
+admin.video.ajax_delete_photo:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/video/ajax_delete_photo/*"
+
+admin.users.doc:
+    name: "ERROR MANY ARG"
+    display: ""
+    type: "page"
+    url: "/opera/users/doc/*"
+
+
+admin.users.downloadEmail:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/downloadEmail"
+
+admin.users.downloadActiveUsers:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/downloadActiveUsers"
+
+admin.users.trans_graph:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/users/trans_graph/"
+
+
+admin.payment:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/"
+    items:
+        admin.payment.all: ""
+        admin.payment.paymentBank: ""
+        admin.payment.paymentWtcard: ""
+        admin.payment.stat: ""
+        admin.payment.stat_payment: ""
+        admin.payment.statDay: ""
+        admin.payment.delete: ""
+        admin.payment.create: ""
+        admin.payment.annul: ""
+        admin.payment.annul.annul: ""
+        admin.payment.unicUrl: ""
+        admin.payment.deleteFoto: ""
+        admin.payment.getFoto: ""
+        admin.payment.delSesFoto: ""
+        admin.payment.addFoto: ""
+        admin.payment.payout: ""
+        admin.payment.payoutbankprocess: ""
+        admin.payment.sendmoney: ""
+        admin.payment.paymentMerchant: ""
+        admin.payment.verifySS: ""
+        admin.payment.getIdsProp: ""
+        admin.payment.wire_bank_pay: ""
+        admin.payment.wire_bank_print: ""
+        admin.payment.get_bank_check: ""
+        admin.payment.get_payment_doc: ""
+        admin.payment.paymentBankArbitrage: ""
+        admin.payment.payout_payed: ""
+        admin.payment.auto_check_payout: ""
+        admin.payment.check_payout: ""
+        admin.payment.payoutWtcard: ""
+        admin.payment.loan_payouts: ""
+        admin.payment.payout_wtdebit: ""
+        admin.payment.payout_pcreds: ""
+        admin.payment.autoCheckPayout: "Авто проверка"
+        admin.payment.stat_exchange_cards: ""
+        admin.payment.stat_exchanger: ""
+        admin.payment.paymentBobusSB: ""
+        admin.payment.paymentBobusSB_apply: ""
+        admin.payment.paymentBobusSB_reject: ""
+        
+
+
+admin.payment.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/all"
+
+admin.payment.exchange_bonus:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/exchange_bonus/"
+
+admin.payment.loan_payouts:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/loan_payouts"
+
+
+admin.payment.stat_exchange_cards:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/stat_exchange_cards"
+    
+admin.payment.stat_exchanger:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/stat_exchanger"    
+
+admin.payment.payout_wtdebit:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payout_wtdebit"
+
+admin.payment.payout_pcreds:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payout_pcreds"
+
+admin.payment.paymentBank:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payment_bank"
+
+admin.payment.paymentWtcard:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payment_wtcard"
+    
+admin.payment.paymentBobusSB:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payment_bonus_sb"    
+    
+admin.payment.paymentBobusSB_apply:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/bonus_sb_apply/"    
+    
+admin.payment.paymentBobusSB_reject:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/bonus_sb_reject/"        
+    
+
+admin.payment.paymentMerchant:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payment_merchant"
+    items:
+        admin.payment.paymentMerchant.discardMerchant: ""
+        admin.payment.paymentMerchant.confermMerchant: ""
+
+admin.payment.paymentMerchant.discardMerchant:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/discardMerchant/"
+
+admin.payment.paymentMerchant.confermMerchant:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/confermMerchant/"
+
+admin.payment.payoutWtcard:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payout_wtcard"
+
+admin.payment.paymentBankArbitrage:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/payment_bank_arbitrage"
+
+admin.payment.stat_credit:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/stat_credit"
+
+admin.payment.stat_payment:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/stat_payment"
+
+
+admin.payment.statDay:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/payment/stat_day/*"
+
+
+admin.payment.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/delete/"
+
+admin.payment.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/create"
+
+admin.payment.annul:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/annul"
+
+admin.payment.annul.annul:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/annul/annul"
+
+admin.payment.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/unic_url/"
+
+admin.payment.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/delete_foto/"
+
+admin.payment.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/get_foto"
+
+admin.payment.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/del_ses_foto"
+
+admin.payment.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/add_foto/"
+
+admin.payment.verifySS:
+    name: "Переводы"
+    display: ""
+    type: "page"
+    url: "/opera/payment/verify_ss"
+
+admin.payment.sendmoney:
+    name: "Переводы"
+    display: ""
+    type: "page"
+    url: "/opera/payment/sendmoney"
+    items:
+        admin.payment.payout.discardSendMoney: ""
+        admin.payment.payout.confermSendMoney: ""
+
+admin.payment.payout.discardSendMoney:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/discardSendMoney/"
+
+admin.payment.payout.confermSendMoney:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/confermSendMoney/"
+
+admin.payment.payout:
+    name: "Заявки на вывод"
+    display: ""
+    type: "page"
+    url: "/opera/payment/payout"
+    items:
+        admin.payment.payout.payoutConferm: ""
+        admin.payment.payout.payoutVerify: ""
+
+admin.payment.payoutbankprocess:
+    name: "Заявки на вывод"
+    display: ""
+    type: "page"
+    url: "/opera/payment/payoutbankprocess"
+
+admin.payment.payoutnew:
+    name: "Заявки на вывод"
+    display: ""
+    type: "page"
+    url: "/opera/payment/payoutnew"
+
+admin.payment.payoutnewno:
+    name: "Заявки на вывод"
+    display: ""
+    type: "page"
+    url: "/opera/payment/payoutnewno"
+
+admin.payment.merchant:
+    name: "Merchant"
+    display: ""
+    type: "page"
+    url: "/opera/payment/payment_merchant"
+
+admin.payment.wire_bank_pay:
+    name: "Оплата Wire Bank"
+    display: ""
+    type: "page"
+    url: "/opera/payment/wire_bank_pay/"
+
+admin.payment.wire_bank_print:
+    name: "Печать Wire Bank"
+    display: ""
+    type: "page"
+    url: "/opera/payment/wire_bank_print/"
+
+admin.payment.get_bank_check:
+    name: "Оплата Wire Bank"
+    display: ""
+    type: "page"
+    url: "/opera/payment/get_bank_check/*"
+
+admin.payment.get_payment_doc:
+    name: "Платежный документ"
+    display: ""
+    type: "page"
+    url: "/opera/payment/get_payment_doc/*"
+
+
+
+admin.payment.payout.payoutConferm:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/payoutConferm/"
+
+admin.payment.payout.payoutVerify:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/payoutVerify/"
+
+admin.payment.сonfermInvestArbitrage:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/confermInvestArbitrage/"
+
+admin.payment.auto_check_payout:
+    name: "Автомат проверки"
+    display: ""
+    type: "page"
+    url: "/opera/payment/auto_check_payout"
+
+
+admin.payment.check_payout:
+    name: "Автомат проверки"
+    display: ""
+    type: "page"
+    url: "/opera/payment/check_payout"
+
+admin.payment.payout_payed:
+    name: "Вывод"
+    display: ""
+    type: "page"
+    url: "/opera/payment/payout_payed"
+    items:
+        admin.payment.payout_payed.save: ""
+        admin.payment.payout_payed.payout_history: ""
+        admin.payment.payout_payed.payout_verify: ""
+        admin.payment.payout_payed.auto_payout: ""
+        admin.payment.payout_payed.payout_payed: ""
+        admin.payment.payout_payed.setPayoutInProcess: ""
+
+admin.payment.payout_payed.save:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/save"
+admin.payment.payout_payed.setPayoutInProcess:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/payment/setPayoutInProcess/"
+
+admin.payment.payout_payed.payout_history:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/payout_payed/payout_history"
+admin.payment.payout_payed.payout_verify:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/payout_payed/payout_verify"
+admin.payment.payout_payed.auto_payout:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/auto_payout"
+admin.payment.payout_payed.auto_payout.cards:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/auto_payout/card_exchange"
+admin.payment.payout_payed.payout_payed:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/payout_payed/payout_payed"
+admin.payment.admin.payment.getIdsProp:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/getIdsProp"
+admin.payment.admin.payment.paymentWtcard:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/payment_wtcard"
+admin.payment.admin.payment.payoutWtcard:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/payout_wtcard"
+admin.payment.autoCheckPayout:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/auto_check_payout"
+admin.payment.cardExchangePay:
+    name: ""
+    display: ""
+    type: "ajax"
+    url: "/opera/payment/card_exchange_pay"
+
+    admin.payment.check_payout:
+        name: ""
+        display: ""
+        type: "ajax"
+        url: "/opera/payment/check_payout"
+
+#
+#
+#
+#
+#
+#
+#
+admin.partner:
+    name: "Партнеры"
+    display: ""
+    type: "group"
+    items:
+        admin.partner.news.2: "Заявки на Партнерство"
+        admin.partner.all.2: "База Партнеров"
+
+admin.partner.news.2:
+    name: "Заявки на Партнерство"
+    display: ""
+    type: "page"
+    url: "/opera/users/news/2"
+
+admin.partner.all.2:
+    name: "База Партнеров"
+    display: ""
+    type: "page"
+    url: "/opera/users/all/2"
+
+#
+#
+#
+#
+#
+#
+#
+admin.credit:
+    name: "Кредитование"
+    display: ""
+    type: "group"
+#    url: "/opera/credit/"
+    items:
+        admin.credit.relations: ""
+        admin.credit.news: ""
+        admin.credit.news.2: ""
+        admin.credit.requests: ""
+        admin.credit.requests.2: ""
+        admin.credit.all: ""
+        admin.credit.all.2: ""
+        admin.credit.expired: ""
+        admin.credit.offer: ""
+        admin.credit.view: ""
+        admin.credit.delete: ""
+        admin.credit.state: ""
+        admin.credit.save: ""
+        admin.credit.time: ""
+        admin.credit.setactive: ""
+        admin.credit.viewKontract: ""
+        admin.credit.viewKontractSablon: ""
+        admin.credit.addTransaction: ""
+
+admin.credit.relations:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/relations"
+
+admin.credit.news:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/news"
+
+admin.credit.news.2:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/news/2"
+
+admin.credit.requests:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/requests"
+
+admin.credit.requests.2:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/requests/2"
+
+admin.credit.all:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/all"
+
+admin.credit.all.2:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/all/2"
+
+admin.credit.expired:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/expired"
+
+admin.credit.offer:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/offer/"
+
+admin.credit.view:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/view/"
+
+admin.credit.delete:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/delete/"
+
+admin.credit.state:
+    name: "HAVE ERROR 2 par"
+    display: ""
+    type: "page"
+#    url: "/opera/credit/state/*"
+
+admin.credit.save:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/save/"
+
+admin.credit.time:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/time"
+
+admin.credit.setactive:
+    name: "HAVE ERROR 2 par"
+    display: ""
+    type: "page"
+#    url: "/opera/credit/setactive/*"
+
+admin.credit.viewKontract:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/view_kontract/"
+
+admin.credit.viewKontractSablon:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/view_kontract_sablon/"
+
+admin.credit.addTransaction:
+    name: ""
+    display: ""
+    type: "page"
+#    url: "/opera/credit/add_transaction/"
+
+
+#
+#
+#
+#
+#
+#
+admin.settings:
+    name: ""
+    display: ""
+    type: "group"
+    items:
+        admin.settings.sender: ""
+        admin.settings.video: ""
+        admin.settings.news: ""
+        admin.settings.page: ""
+        admin.settings.banner: ""
+        admin.settings.exchanges: ""
+        admin.settings.settings: ""
+        admin.settings.admin: ""
+        admin.settings.log: ""
+        admin.settings.statistic: ""
+        admin.settings.statistic_messenger: ""
+
+        admin.settings.businessCenter: ""
+        admin.settings.partnerBanner: ""
+        admin.settings.shablon: ""
+        admin.settings.contribution: ""
+        admin.settings.systemNews: ""
+
+admin.settings.sender:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/sender/"
+    items:
+        admin.settings.sender.all: ""
+        admin.settings.sender.delete: ""
+        admin.settings.sender.create: ""
+        admin.settings.sender.unicUrl: ""
+        admin.settings.sender.deleteFoto: ""
+        admin.settings.sender.getFoto: ""
+        admin.settings.sender.delSesFoto: ""
+        admin.settings.sender.addFoto: ""
+
+
+admin.settings.sender.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/sender/all"
+
+admin.settings.sender.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/delete/"
+
+admin.settings.sender.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/create"
+
+admin.settings.sender.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/unic_url/"
+
+admin.settings.sender.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/delete_foto/"
+
+admin.settings.sender.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/get_foto"
+
+admin.settings.sender.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/del_ses_foto"
+
+admin.settings.sender.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/sender/add_foto/"
+
+
+admin.settings.news:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/news/"
+    items:
+        admin.settings.news.all: ""
+        admin.settings.news.delete: ""
+        admin.settings.news.create: ""
+        admin.settings.news.unicUrl: ""
+        admin.settings.news.deleteFoto: ""
+        admin.settings.news.getFoto: ""
+        admin.settings.news.delSesFoto: ""
+        admin.settings.news.addFoto: ""
+
+
+admin.settings.news.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/news/all"
+
+admin.settings.news.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/delete/"
+
+admin.settings.news.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/create"
+
+admin.settings.news.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/unic_url/"
+
+admin.settings.news.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/delete_foto/"
+
+admin.settings.news.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/get_foto"
+
+admin.settings.news.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/del_ses_foto"
+
+admin.settings.news.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/news/add_foto/"
+
+admin.settings.video:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/video/"
+    items:
+        admin.settings.video.all: ""
+        admin.settings.video.delete: ""
+        admin.settings.video.create: ""
+        admin.settings.video.unicUrl: ""
+        admin.settings.video.deleteFoto: ""
+        admin.settings.video.getFoto: ""
+        admin.settings.video.delSesFoto: ""
+        admin.settings.video.addFoto: ""
+
+
+admin.settings.video.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/video/all"
+
+admin.settings.video.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/delete/"
+
+admin.settings.video.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/create"
+
+admin.settings.video.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/unic_url/"
+
+admin.settings.video.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/delete_foto/"
+
+admin.settings.video.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/get_foto"
+
+admin.settings.video.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/del_ses_foto"
+
+admin.settings.video.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/video/add_foto/"
+
+
+admin.settings.page:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/page/"
+    items:
+        admin.settings.page.all: ""
+        admin.settings.page.delete: ""
+        admin.settings.page.create: ""
+        admin.settings.page.unicUrl: ""
+        admin.settings.page.deleteFoto: ""
+        admin.settings.page.getFoto: ""
+        admin.settings.page.delSesFoto: ""
+        admin.settings.page.addFoto: ""
+
+
+admin.settings.page.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/page/all"
+
+admin.settings.page.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/delete/"
+
+admin.settings.page.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/create"
+
+admin.settings.page.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/unic_url/"
+
+admin.settings.page.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/delete_foto/"
+
+admin.settings.page.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/get_foto"
+
+admin.settings.page.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/del_ses_foto"
+
+admin.settings.page.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/page/add_foto/"
+
+
+admin.settings.banner:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/banner/"
+    items:
+        admin.settings.banner.all: ""
+        admin.settings.banner.delete: ""
+        admin.settings.banner.create: ""
+        admin.settings.banner.unicUrl: ""
+        admin.settings.banner.deleteFoto: ""
+        admin.settings.banner.getFoto: ""
+        admin.settings.banner.delSesFoto: ""
+        admin.settings.banner.addFoto: ""
+
+
+admin.settings.banner.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/banner/all"
+
+admin.settings.banner.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/delete/"
+
+admin.settings.banner.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/create"
+
+admin.settings.banner.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/unic_url/"
+
+admin.settings.banner.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/delete_foto/"
+
+admin.settings.banner.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/get_foto"
+
+admin.settings.banner.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/del_ses_foto"
+
+admin.settings.banner.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/banner/add_foto/"
+
+admin.settings.exchanges:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/exchanges/"
+    items:
+        admin.settings.exchanges.all: ""
+        admin.settings.exchanges.delete: ""
+        admin.settings.exchanges.create: ""
+        admin.settings.exchanges.unicUrl: ""
+        admin.settings.exchanges.deleteFoto: ""
+        admin.settings.exchanges.getFoto: ""
+        admin.settings.exchanges.delSesFoto: ""
+        admin.settings.exchanges.addFoto: ""
+
+
+admin.settings.exchanges.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/exchanges/all"
+
+admin.settings.exchanges.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/delete/"
+
+admin.settings.exchanges.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/create"
+
+admin.settings.exchanges.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/unic_url/"
+
+admin.settings.exchanges.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/delete_foto/"
+
+admin.settings.exchanges.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/get_foto"
+
+admin.settings.exchanges.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/del_ses_foto"
+
+admin.settings.exchanges.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/exchanges/add_foto/"
+
+
+admin.settings.settings:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/settings/"
+    items:
+        admin.settings.settings.all: ""
+        admin.settings.settings.delete: ""
+        admin.settings.settings.create: ""
+        admin.settings.settings.unicUrl: ""
+        admin.settings.settings.deleteFoto: ""
+        admin.settings.settings.getFoto: ""
+        admin.settings.settings.delSesFoto: ""
+        admin.settings.settings.addFoto: ""
+
+
+admin.settings.settings.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/settings/all"
+
+admin.settings.settings.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/delete/"
+
+admin.settings.settings.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/create"
+
+admin.settings.settings.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/unic_url/"
+
+admin.settings.settings.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/delete_foto/"
+
+admin.settings.settings.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/get_foto"
+
+admin.settings.settings.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/del_ses_foto"
+
+admin.settings.settings.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/settings/add_foto/"
+
+admin.settings.admin:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/admins/"
+    items:
+        admin.settings.admin.all: ""
+        admin.settings.admin.delete: ""
+        admin.settings.admin.create: ""
+        admin.settings.admin.unicUrl: ""
+        admin.settings.admin.deleteFoto: ""
+        admin.settings.admin.getFoto: ""
+        admin.settings.admin.delSesFoto: ""
+        admin.settings.admin.addFoto: ""
+        admin.settings.admin.event_subscribes: ""
+        admin.settings.admin.event_params: ""
+        admin.settings.admin.link_event: ""
+        admin.settings.admin.unlink_event: ""
+
+
+admin.settings.admin.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/admins/all"
+
+admin.settings.admin.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/delete/"
+
+admin.settings.admin.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/create"
+
+admin.settings.admin.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/unic_url/"
+
+admin.settings.admin.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/delete_foto/"
+
+admin.settings.admin.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/get_foto"
+
+admin.settings.admin.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/del_ses_foto"
+
+admin.settings.admin.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/add_foto/"
+
+admin.settings.admin.event_subscribes:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/event_subscribes/"
+
+admin.settings.admin.event_params:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/event_params/"
+
+admin.settings.admin.link_event:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/link_event/"
+
+admin.settings.admin.unlink_event:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/admins/unlink_event/"
+
+
+admin.settings.log:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/log"
+    items:
+        admin.settings.log.all: ""
+        admin.settings.log.delete: ""
+        admin.settings.log.create: ""
+        admin.settings.log.unicUrl: ""
+        admin.settings.log.deleteFoto: ""
+        admin.settings.log.getFoto: ""
+        admin.settings.log.delSesFoto: ""
+        admin.settings.log.addFoto: ""
+
+
+admin.settings.log.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/log/all"
+
+admin.settings.log.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/delete/"
+
+admin.settings.log.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/create"
+
+admin.settings.log.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/unic_url/"
+
+admin.settings.log.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/delete_foto/"
+
+admin.settings.log.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/get_foto"
+
+admin.settings.log.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/del_ses_foto"
+
+admin.settings.log.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/log/add_foto/"
+
+
+admin.settings.statistic_messenger:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/statistic_messenger"
+    items:
+        admin.settings.statistic_messenger.get_chart: ""
+        admin.settings.statistic_messenger.get_services: ""
+
+
+
+admin.settings.statistic_messenger.get_chart:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/statistic_messenger/get_chart"
+
+admin.settings.statistic_messenger.get_services:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/statistic_messenger/get_services"
+
+
+
+admin.settings.statistic:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/statistic"
+    items:
+        admin.settings.statistic.all: ""
+        admin.settings.statistic.delete: ""
+        admin.settings.statistic.create: ""
+
+
+admin.settings.statistic.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/statistic/all"
+
+admin.settings.statistic.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/statistic/delete/"
+
+admin.settings.statistic.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/statistic/create"
+
+admin.settings.businessCenter:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/business_center/"
+    items:
+        admin.settings.businessCenter.all: ""
+        admin.settings.businessCenter.delete: ""
+        admin.settings.businessCenter.create: ""
+        admin.settings.businessCenter.unicUrl: ""
+        admin.settings.businessCenter.deleteFoto: ""
+        admin.settings.businessCenter.getFoto: ""
+        admin.settings.businessCenter.delSesFoto: ""
+        admin.settings.businessCenter.addFoto: ""
+
+
+admin.settings.businessCenter.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/businessCenter/all"
+
+admin.settings.businessCenter.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/delete/"
+
+admin.settings.businessCenter.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/create"
+
+admin.settings.businessCenter.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/unic_url/"
+
+admin.settings.businessCenter.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/delete_foto/"
+
+admin.settings.businessCenter.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/get_foto"
+
+admin.settings.businessCenter.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/del_ses_foto"
+
+admin.settings.businessCenter.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/businessCenter/add_foto/"
+
+admin.settings.partnerBanner:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/partner_banner/"
+    items:
+        admin.settings.partnerBanner.all: ""
+        admin.settings.partnerBanner.delete: ""
+        admin.settings.partnerBanner.create: ""
+        admin.settings.partnerBanner.unicUrl: ""
+        admin.settings.partnerBanner.deleteFoto: ""
+        admin.settings.partnerBanner.getFoto: ""
+        admin.settings.partnerBanner.delSesFoto: ""
+        admin.settings.partnerBanner.addFoto: ""
+
+
+admin.settings.partnerBanner.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/partner_banner/all"
+
+admin.settings.partnerBanner.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/delete/"
+
+admin.settings.partnerBanner.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/create"
+
+admin.settings.partnerBanner.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/unic_url/"
+
+admin.settings.partnerBanner.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/delete_foto/"
+
+admin.settings.partnerBanner.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/get_foto"
+
+admin.settings.partnerBanner.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/del_ses_foto"
+
+admin.settings.partnerBanner.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/partner_banner/add_foto/"
+
+
+admin.settings.shablon:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/shablon/"
+    items:
+        admin.settings.shablon.all: ""
+        admin.settings.shablon.delete: ""
+        admin.settings.shablon.create: ""
+        admin.settings.shablon.unicUrl: ""
+        admin.settings.shablon.deleteFoto: ""
+        admin.settings.shablon.getFoto: ""
+        admin.settings.shablon.delSesFoto: ""
+        admin.settings.shablon.addFoto: ""
+
+
+admin.settings.shablon.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/shablon/all"
+
+admin.settings.shablon.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/delete/"
+
+admin.settings.shablon.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/create"
+
+admin.settings.shablon.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/unic_url/"
+
+admin.settings.shablon.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/delete_foto/"
+
+admin.settings.shablon.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/get_foto"
+
+admin.settings.shablon.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/del_ses_foto"
+
+admin.settings.shablon.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/shablon/add_foto/"
+
+
+admin.settings.contribution:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/contribution/"
+    items:
+        admin.settings.contribution.all: ""
+        admin.settings.contribution.delete: ""
+        admin.settings.contribution.create: ""
+        admin.settings.contribution.unicUrl: ""
+        admin.settings.contribution.deleteFoto: ""
+        admin.settings.contribution.getFoto: ""
+        admin.settings.contribution.delSesFoto: ""
+        admin.settings.contribution.addFoto: ""
+
+
+admin.settings.contribution.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/contribution/all"
+
+admin.settings.contribution.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/delete/"
+
+admin.settings.contribution.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/create"
+
+admin.settings.contribution.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/unic_url/"
+
+admin.settings.contribution.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/delete_foto/"
+
+admin.settings.contribution.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/get_foto"
+
+admin.settings.contribution.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/del_ses_foto"
+
+admin.settings.contribution.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/contribution/add_foto/"
+
+
+admin.settings.systemNews:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_news/"
+    items:
+        admin.settings.systemNews.all: ""
+        admin.settings.systemNews.delete: ""
+        admin.settings.systemNews.create: ""
+        admin.settings.systemNews.unicUrl: ""
+        admin.settings.systemNews.deleteFoto: ""
+        admin.settings.systemNews.getFoto: ""
+        admin.settings.systemNews.delSesFoto: ""
+        admin.settings.systemNews.addFoto: ""
+
+
+admin.settings.systemNews.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/systemNews/all"
+
+admin.settings.systemNews.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/delete/"
+
+admin.settings.systemNews.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/create"
+
+admin.settings.systemNews.unicUrl:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/unic_url/"
+
+admin.settings.systemNews.deleteFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/delete_foto/"
+
+admin.settings.systemNews.getFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/get_foto"
+
+admin.settings.systemNews.delSesFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/del_ses_foto"
+
+admin.settings.systemNews.addFoto:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/systemNews/add_foto/"
+
+
+admin.system_messages:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_messages/"
+    items:
+        admin.system_messages.all: ""
+        admin.system_messages.delete: ""
+        admin.system_messages.create: ""
+
+
+admin.system_messages.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_messages/all"
+
+admin.system_messages.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/system_messages/create"
+
+
+admin.system_messages.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/system_messages/delete/"
+
+###
+admin.system_vars:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_vars/"
+    items:
+        admin.system_vars.all: ""
+        admin.system_vars.delete: ""
+        admin.system_vars.create: ""
+
+
+admin.system_vars.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_vars/all"
+
+admin.system_vars.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/system_vars/create"
+
+
+admin.system_vars.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/system_vars/delete/"
+
+
+
+admin.cards:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards/"
+admin.cards.requests:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards/requests"
+admin.cards.verified:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards/verified"
+admin.cards.approved:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards/approved"
+admin.cards.processed:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards/processed"
+admin.cards.declined:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards/declined"
+
+admin.cards.verify:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/cards/verify/"
+admin.cards.approve:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/cards/approve/"
+admin.cards.unverify:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/cards/unverify/"
+
+admin.cards.create_card:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/cards/create_card/"
+admin.cards.request:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/cards/request"
+
+
+###
+admin.system_events:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_events/"
+    items:
+        admin.system_events.all: ""
+        admin.system_events.delete: ""
+        admin.system_events.create: ""
+
+
+admin.system_events.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_events/all"
+
+admin.system_events.subscribers:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/system_events/subscribers/"
+
+
+admin.system_events.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/system_events/create"
+
+
+admin.system_events.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/system_events/delete/"
+
+###
+###
+admin.whitelabel:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/whitelabel/"
+    items:
+        admin.whitelabel.all: ""
+        admin.whitelabel.delete: ""
+        admin.whitelabel.create: ""
+        admin.whitelabel.partners_list: ""
+
+
+admin.whitelabel.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/whitelabel/all"
+
+
+admin.whitelabel.create:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/whitelabel/create"
+
+
+admin.whitelabel.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/whitelabel/delete/"
+    
+admin.whitelabel.partners_list:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/whitelabel/partners_list"    
+
+###
+
+
+admin.stabfond:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/stabfond/"
+    items:
+        admin.stabfond.market_list: ""
+        admin.stabfond.market_buyed_list: ""
+        admin.stabfond.fill_bots: ""
+        admin.stabfond.change_record: ""
+        admin.stabfond.delete_record: ""
+        admin.stabfond.get_record: ""
+        admin.stabfond.use_record: ""
+        admin.stabfond.sell: ""
+        admin.stabfond.sell_all: ""
+        admin.stabfond.buy_bots: ""
+        admin.stabfond.stat: ""
+        admin.stabfond.stat_in_vip: ""
+        admin.stabfond.stat_in_norm: ""
+        
+
+admin.stabfond.market_list:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/stabfond/market_list"
+
+admin.stabfond.market_buyed_list:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/stabfond/market_buyed_list"
+
+admin.stabfond.fill_bots:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/fill_bots"
+
+
+admin.stabfond.get_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/get_record/"
+
+
+admin.stabfond.use_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/use_record/"
+
+admin.stabfond.change_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/change_record/"
+
+admin.stabfond.sell:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/sell/"
+
+admin.stabfond.sell_all:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/sell_all"
+
+admin.stabfond.buy_bots:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/buy_bots"
+
+
+admin.stabfond.delete_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/delete_record/"
+
+admin.stabfond.stat:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/stat"
+admin.stabfond.stat_in_vip:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/stat_in_vip"    
+admin.stabfond.stat_in_norm:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/stabfond/stat_in_norm"    
+        
+
+###
+admin.gift_guarant:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/gift_guarant/"
+    items:
+        admin.gift_guarant.market_list: ""
+        admin.gift_guarant.market_buyed_list: ""
+        admin.gift_guarant.fill_bots: ""
+        admin.gift_guarant.change_record: ""
+        admin.gift_guarant.delete_record: ""
+        admin.gift_guarant.get_record: ""
+        admin.gift_guarant.use_record: ""
+        admin.gift_guarant.sell: ""
+        admin.gift_guarant.sell_all: ""
+        admin.gift_guarant.buy_bots: ""
+        admin.gift_guarant.stat: ""
+        admin.gift_guarant.stat_in_vip: ""
+        admin.gift_guarant.stat_in_norm: ""
+
+
+
+admin.gift_guarant.market_list:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/gift_guarant/market_list"
+
+admin.gift_guarant.market_buyed_list:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/gift_guarant/market_buyed_list"
+
+admin.gift_guarant.fill_bots:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/fill_bots"
+
+
+admin.gift_guarant.get_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/get_record/"
+
+
+admin.gift_guarant.use_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/use_record/"
+
+admin.gift_guarant.change_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/change_record/"
+
+admin.gift_guarant.sell:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/sell/"
+
+admin.gift_guarant.sell_all:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/sell_all"
+
+admin.gift_guarant.buy_bots:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/buy_bots"
+
+
+admin.gift_guarant.delete_record:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/delete_record/"
+
+admin.gift_guarant.stat:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/stat"
+admin.gift_guarant.stat_in_vip:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/stat_in_vip"    
+admin.gift_guarant.stat_in_norm:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/gift_guarant/stat_in_norm"    
+
+
+
+admin.support.send_notices:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/send_notices/"
+    items:
+        admin.support.send_notices.all: ""
+        admin.support.send_notices.create: ""
+        admin.support.send_notices.ajax_search: ""
+
+
+
+
+admin.support.send_notices.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/send_notices/all"
+
+
+admin.support.send_notices.create:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/send_notices/create"
+
+admin.support.send_notices.ajax_search:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/send_notices/ajax_search"
+
+
+admin.support.vdna_reports:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/vdna_reports/"
+    items:
+        admin.support.vdna_reports.all: ""
+        admin.support.vdna_reports.gen: ""
+        admin.support.vdna_reports.send: ""
+        admin.support.vdna_reports.remove: ""
+
+admin.support.vdna_reports.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/vdna_reports/all"
+
+admin.support.vdna_reports.gen:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/vdna_reports/gen"
+
+admin.support.vdna_reports.send:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/vdna_reports/send/"
+
+admin.settings.translate:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/translate/"
+    items:
+        admin.settings.translate.all: ""
+
+admin.support.vdna_reports.delete:
+    name: ""
+    display: ""
+    type: "action"
+    url: "/opera/vdna_reports/delete/"
+
+admin.settings.translate.all:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/translate/all"
+
+admin.currency_exchange_chat.all:
+    name: ""
+    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_chat/all"
+
+admin.currency_exchange_chat.close_inactive_chats:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange_chat/close_inactive_chats"
+
+
+admin.currency_exchange.message:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange_chat/message/*"
+
+admin.currency_exchange.close_chat:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange_chat/close_chat/*"
+
+#admin.currency_exchange.index:
+#    name: ""
+#    type: "page"
+#    url: "/opera/currency_exchange/*"
+
+admin.currency_exchange.completed_orders:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/completed_orders"
+
+admin.currency_exchange.save_completed_orders:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/save_completed_orders"
+
+admin.currency_exchange.ajax_generate_completed_orders:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/ajax_generate_completed_orders"
+
+
+admin.currency_exchange.get_order:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/get_order/"
+
+admin.currency_exchange.order:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/order/*"
+
+admin.currency_exchange.get_user_transactions:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/get_user_transactions/*"
+admin.currency_exchange.get_user_prefund_transactions:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/get_user_prefund_transactions/*"
+admin.prefund.all:
+    name: ""
+    type: "page"
+    url: "/opera/prefund/all"
+
+admin.currency_exchange.get_user_orders:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/get_user_orders/*"
+
+admin.currency_exchange.search_user_all_orders:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/search_user_all_orders/*"
+
+admin.currency_exchange.save_archive_order:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/save_archive_order"
+
+admin.currency_exchange.save_original_order:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/save_original_order"
+
+admin.currency_exchange.reset_timer:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/reset_timer"
+
+admin.currency_exchange.show_any_document:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/show_any_document/*"
+
+admin.currency_exchange.order_doc:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/order_doc/*"
+
+
+
+admin.currency_exchange.all:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/all"
+
+admin.currency_exchange.order_arch:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/order_arch"
+
+admin.currency_exchange.all_new:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/all_new"
+
+admin.currency_exchange.all_linked:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/all_linked"
+
+admin.currency_exchange.all_unlinked:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/all_unlinked"
+
+admin.currency_exchange.all_sb:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/all_sb"
+
+admin.currency_exchange_block_users.all:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_block_users/all"
+
+
+admin.currency_exchange.all_other:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/all_other"
+
+admin.currency_exchange.order_arhiv:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/order_arhiv/*"
+
+
+admin.currency_exchange.operator_last_confirm_order_arhiv:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/operator_last_confirm_order_arhiv"
+
+admin.currency_exchange.operator_last_confirm_order:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/operator_last_confirm_order"
+
+
+admin.currency_exchange.operator_cancell_order:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/operator_cancell_order"
+
+admin.currency_exchange.save_order_arhiv:
+    name: ""
+    type: "page"
+    url: "/opera/currency_exchange/save_order_arhiv"
+
+
+admin.currency_exchange_paysys.all:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/all"
+
+admin.currency_exchange_paysys.group:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/group/"
+
+admin.currency_exchange_paysys.ps:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/ps/"
+
+admin.currency_exchange_paysys.ps_create:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/ps_create/"
+
+
+admin.currency_exchange_paysys.ps_delete:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/ps_delete/"
+
+
+admin.currency_exchange_paysys.group_create:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/group_create/"
+
+
+admin.currency_exchange_paysys.group_delete:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/group_delete/"
+
+admin.currency_exchange_paysys.new_delete:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/new_delete/"
+
+
+admin.currency_exchange_paysys.new_set_ps_state:
+    name: ""
+#    dispadmin.users.alllay: ""
+    type: "page"
+    url: "/opera/currency_exchange_paysys/new_set_ps_state/"
+
+
+admin.settings.cards_prefunding:
+    name: ""
+    display: ""
+    type: "page"
+    url: "/opera/cards_prefunding/"
+    items:
+        admin.settings.cards_prefunding.all: ""
+        admin.settings.cards_prefunding.fetch: ""
+        admin.settings.cards_prefunding.load: ""
+
+
+admin.settings.cards_prefunding.all:
+    name: ""
+    type: "page"
+    url: "/opera/cards_prefunding/all"
+
+admin.settings.cards_prefunding.fetch:
+    name: ""
+    type: "page"
+    url: "/opera/cards_prefunding/fetch"
+
+admin.settings.cards_prefunding.load:
+    name: ""
+    type: "page"
+    url: "/opera/cards_prefunding/load"
+    item:
+        admin.settings.cards_prefunding.usersCards: ""
+
+admin.settings.cards_prefunding.usersCards:
+    name: ""
+    type: "page"
+    url: "/opera/cards_prefunding/ajax_get_users_cards/"
+
+
+admin.settings.cards_prefunding.unload:
+    name: ""
+    type: "page"
+    url: "/opera/cards_prefunding/unload"
+    item:
+        admin.settings.cards_prefunding.usersCards: ""
+
