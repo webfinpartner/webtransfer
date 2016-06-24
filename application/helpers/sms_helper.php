@@ -28,8 +28,8 @@
 	 function sms_sender($phone, $text)
 	 {
 		$user = "webtransfer";
-		$password = "290905";
-		$api_id = "3428251";
+		$password = "";
+		$api_id = "";
 		$baseurl ="http://api.clickatell.com";
 
 		$text = urlencode($text);
